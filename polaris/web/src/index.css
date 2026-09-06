@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+@import "tailwindcss";
+
+/*
+ * Material Symbols Outlined — ligature icon font used by every Stitch screen.
+ * Self-hosted copy in /public (npm: material-symbols) so production has no
+ * CDN dependency.
+ */
+@font-face {
+  font-family: "Material Symbols Outlined";
+  font-style: normal;
+  font-weight: 100 700;
+  font-display: block;
+  src: url("/material-symbols-outlined.woff2") format("woff2");
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/*
+ * POLARIS "Polar Operations Command" design tokens.
+ * Every value below is extracted verbatim from the Stitch screens
+ * (design/stitch/00-ops-console.html tailwind.config) — the token names match
+ * the Stitch HTML class strings so design markup translates class-for-class.
+ */
+@theme {
+  /* --- surfaces --- */
+  --color-background: #0d131f;
+  --color-surface-dim: #0d131f;
+  --color-surface-raised: #0b1524;
+  --color-surface-void: #080e19;
+  --color-surface-panel: rgba(16, 28, 46, 0.82);
+  --color-surface-container: #1a202b;
+  --color-surface-container-low: #161c27;
+  --color-surface-container-high: #242a36;
+  --color-surface-container-lowest: #080e19;
+
+  /* --- primary (electric cyan) --- */
+  --color-primary: #8aebff;
+  --color-primary-container: #22d3ee;
+  --color-primary-fixed: #a2eeff;
+  --color-primary-fixed-dim: #2fd9f4;
+  --color-accent-cyan-dim: rgba(34, 211, 238, 0.12);
+  --color-accent-cyan-glow: rgba(34, 211, 238, 0.35);
+
+  /* --- on-colors (text/icons sitting on the color above) --- */
+  --color-on-primary: #00363e;
+  --color-on-surface: #dde2f3;
+  --color-on-surface-variant: #bbc9cd;
+
+  /* --- error --- */
+  --color-error-container: #93000a;
+  --color-on-error-container: #ffdad6;
+
+  /* --- secondary --- */
+  --color-secondary: #adc8f5;
+  --color-secondary-container: #2f4a70;
+
+  /* --- status --- */
+  --color-status-safe: #4ade80;
+  --color-status-caution: #facc15;
+  --color-status-danger: #f87171;
+  --color-status-telemetry: #60a5fa;
+
+  /* --- text --- */
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted: #64748b;
+
+  /* --- borders --- */
+  --color-border-subtle: #16263c;
+  --color-border-active: #1e3a5f;
+
+  /* --- typography: Space Grotesk headlines / JetBrains Mono everything else --- */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* --- scale (px / line-height / letter-spacing / weight) --- */
+  --text-display-hero: 44px;
+  --text-display-hero--line-height: 48px;
+  --text-display-hero--letter-spacing: -0.03em;
+  --text-display-hero--font-weight: 700;
+  --text-display-hero-mobile: 30px;
+  --text-display-hero-mobile--line-height: 36px;
+  --text-display-hero-mobile--letter-spacing: -0.02em;
+  --text-headline-lg: 24px;
+  --text-headline-lg--line-height: 30px;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg--font-weight: 600;
+  --text-headline-md: 18px;
+  --text-headline-md--line-height: 24px;
+  --text-headline-md--letter-spacing: -0.01em;
+  --text-headline-md--font-weight: 600;
+  --text-headline-sm: 15px;
+  --text-headline-sm--line-height: 20px;
+  --text-headline-sm--font-weight: 600;
+  --text-body-lg: 14px;
+  --text-body-lg--line-height: 22px;
+  --text-body-md: 13px;
+  --text-body-md--line-height: 18px;
+  --text-body-sm: 12px;
+  --text-body-sm--line-height: 16px;
+  --text-micro-label: 10px;
+  --text-micro-label--line-height: 12px;
+  --text-micro-label--letter-spacing: 0.08em;
+  --text-micro-label--font-weight: 600;
+  --text-telemetry-code: 11px;
+  --text-telemetry-code--line-height: 14px;
+  --text-telemetry-code--letter-spacing: 0.04em;
+  --text-telemetry-code--font-weight: 500;
+  --text-stat-metric: 32px;
+  --text-stat-metric--line-height: 36px;
+  --text-stat-metric--letter-spacing: -0.02em;
+  --text-stat-metric--font-weight: 700;
+
+  /* --- spacing (Stitch named gutters) --- */
+  --spacing-gutter-xs: 0.25rem;
+  --spacing-gutter-sm: 0.5rem;
+  --spacing-gutter-md: 0.75rem;
+  --spacing-gutter-lg: 1rem;
+  --spacing-panel-pad-dense: 0.5rem;
+  --spacing-panel-pad-compact: 0.75rem;
+  --spacing-panel-pad-default: 1rem;
+  --spacing-panel-pad-loose: 1.25rem;
+  --spacing-grid-margin: 1rem;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background: var(--color-background);
+    color: var(--color-text-primary);
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Stitch hides scrollbars on the dense operational layout */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* a11y: keyboard users still need a visible focus ring even when
+     scrollbars are hidden and mouse outlines are suppressed */
+  :focus-visible {
+    outline: 1px solid var(--color-primary-container);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility micro-label {
+  font-size: var(--text-micro-label);
+  line-height: var(--text-micro-label--line-height);
+  letter-spacing: var(--text-micro-label--letter-spacing);
+  font-weight: var(--text-micro-label--font-weight);
+  text-transform: uppercase;
+}
+
+@utility glass-panel {
+  background: var(--color-surface-panel);
+  border: 1px solid var(--color-border-subtle);
+  backdrop-filter: blur(12px);
+}

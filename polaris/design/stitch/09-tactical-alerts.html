@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-container-high":"#242a36","on-tertiary-container":"#454f60","status-telemetry":"#60A5FA","primary-fixed-dim":"#2fd9f4","surface-bright":"#333946","tertiary-container":"#b7c1d6","on-primary-container":"#005763","on-background":"#dde2f3","text-muted":"#64748B","surface-container-low":"#161c27","on-tertiary-fixed":"#121c2b","surface-container":"#1a202b","on-secondary-container":"#9fbae6","surface-container-highest":"#2f3541","tertiary":"#d3ddf2","surface-raised":"#0B1524","accent-cyan-dim":"rgba(34, 211, 238, 0.12)","text-primary":"#F1F5F9","surface-variant":"#2f3541","on-primary":"#00363e","on-error-container":"#ffdad6","text-secondary":"#94A3B8","border-active":"#1E3A5F","surface-container-lowest":"#080e19","outline-variant":"#3c494c","on-surface-variant":"#bbc9cd","surface-dim":"#0d131f","on-secondary-fixed-variant":"#2d486d","secondary-fixed":"#d5e3ff","error":"#ffb4ab","surface":"#0d131f","on-primary-fixed-variant":"#004e5a","error-container":"#93000a","on-primary-fixed":"#001f25","secondary":"#adc8f5","secondary-fixed-dim":"#adc8f5","surface-tint":"#2fd9f4","status-danger":"#F87171","on-secondary":"#133155","secondary-container":"#2f4a70","tertiary-fixed":"#d9e3f8","surface-panel":"rgba(16, 28, 46, 0.82)","accent-cyan-glow":"rgba(34, 211, 238, 0.35)","outline":"#859397","on-error":"#690005","primary-fixed":"#a2eeff","primary":"#8aebff","on-tertiary-fixed-variant":"#3e4758","background":"#0d131f","status-caution":"#FACC15","status-safe":"#4ADE80","border-subtle":"#16263C","inverse-on-surface":"#2a303d","inverse-surface":"#dde2f3","tertiary-fixed-dim":"#bdc7dc","on-tertiary":"#273141","on-surface":"#dde2f3","on-secondary-fixed":"#001c3b","primary-container":"#22d3ee","inverse-primary":"#006877"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-sm":"0.5rem","gutter-xs":"0.25rem","grid-margin":"1rem","panel-pad-compact":"0.75rem","panel-pad-dense":"0.5rem","gutter-lg":"1rem","panel-pad-loose":"1.25rem","gutter-md":"0.75rem","panel-pad-default":"1rem"},"fontFamily":{"display-hero":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"micro-label":["JetBrains Mono"],"telemetry-code":["JetBrains Mono"],"body-lg":["JetBrains Mono"],"body-sm":["JetBrains Mono"],"stat-metric-mobile":["JetBrains Mono"],"stat-metric":["JetBrains Mono"]},"fontSize":{"display-hero":["44px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-hero-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"30px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"600"}],"micro-label":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"600"}],"telemetry-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-lg":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"stat-metric-mobile":["24px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"stat-metric":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface select-none"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-raised border-b border-border-subtle"><div class="h-16 w-full px-grid-margin flex items-center justify-between gap-gutter-md"><div class="flex items-center gap-gutter-md min-w-[340px]"><img alt="POLARIS Polar Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UVElrj97vfNgzZpaxf_We33nkHUlU2G2ZLfnJHa6peu_SUmcSfd0IMfRehgOGrYxXoqbRyiXTrtoqy5TCsWAlnQAdc4fe5WadDpyw2C1xH4akH63RE4QHRcA-CZPatdXn30l3Gz81XHG8_PCov-hzCaJvPDz-BPbX_XXddSMJLGEDogOsg1sEdv05FMEqP0GJ35yvTarfDgT_7hf5ShPbZp3mTH1KmOR5fwWhp9Lfljve67hlDWam6hCjf"/><div class="flex flex-col"><div class="flex items-center gap-gutter-sm"><span class="font-headline-md text-headline-md font-bold tracking-tight text-text-primary uppercase">POLARIS</span><span class="px-1.5 py-0.5 bg-surface-container-high border border-border-subtle text-primary font-micro-label text-micro-label uppercase">NCPOR</span></div><span class="font-micro-label text-micro-label text-text-muted uppercase">AI-Enabled Antarctic Navigation &amp; Decision Support System</span></div></div><div class="hidden xl:flex items-center gap-gutter-sm"><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-primary text-[16px]">ac_unit</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">TEMP:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">-18°C</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-status-telemetry text-[16px]">air</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">WIND:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">25 km/h</span><span class="font-micro-label text-micro-label text-text-muted">SSE</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-secondary text-[16px]">visibility</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">VIS:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">5 km</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-primary text-[16px]">radar</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">SAR ICE:</span><span class="font-telemetry-code text-telemetry-code text-primary font-bold">SYNCED</span></div></div><div class="flex items-center gap-gutter-md"><div class="flex flex-col items-end"><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold tracking-wider">02 SEP 2026 06:30 UTC</span><div class="flex items-center gap-1.5"><span class="inline-block w-2 h-2 bg-status-safe animate-pulse"></span><span class="font-micro-label text-micro-label text-status-safe tracking-widest uppercase">SYSTEM ONLINE</span></div></div><div class="h-7 w-[1px] bg-border-subtle"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low border-r border-border-subtle z-40 flex flex-col justify-between"><div class="py-panel-pad-compact flex flex-col"><div class="px-panel-pad-compact pb-2 mb-2 border-b border-border-subtle flex items-center justify-between"><span class="font-micro-label text-micro-label text-text-muted tracking-widest uppercase">NAVIGATION STACK</span><span class="font-telemetry-code text-telemetry-code text-primary">GRID v4.2</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-bold border-l-2 border-primary"><a aria-current="page" class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 transition-colors bg-primary-container text-on-primary font-bold border-l-2 border-primary" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span>Dashboard</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mission-planner" href="#"><span class="material-symbols-outlined text-[18px]">explore</span>Mission Planner</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sea-ice-forecast" href="#"><span class="material-symbols-outlined text-[18px]">layers</span>Sea Ice Forecast</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="iceberg-tracker" href="#"><span class="material-symbols-outlined text-[18px]">radar</span>Iceberg Tracker</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="route-optimizer" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span>Route Optimizer</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="risk-analysis" href="#"><span class="material-symbols-outlined text-[18px]">warning</span>Risk Analysis</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weather-and-ocean" href="#"><span class="material-symbols-outlined text-[18px]">air</span>Weather &amp; Ocean</a><a class="flex items-center justify-between px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="alerts" href="#"><div class="flex items-center gap-gutter-sm"><span class="material-symbols-outlined text-[18px]">notifications_active</span>Alerts</div><span class="px-1.5 py-0.5 bg-error-container text-on-error-container font-micro-label text-micro-label font-bold">3</span></a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span>Reports</a></nav></div><div class="p-panel-pad-compact border-t border-border-subtle bg-surface-raised flex flex-col gap-gutter-xs"><div class="flex items-center justify-between text-text-muted font-micro-label text-micro-label uppercase"><span>SAT LINK LATENCY</span><span class="text-status-safe font-telemetry-code text-telemetry-code">42 ms</span></div><div class="w-full h-1 bg-border-subtle overflow-hidden"><div class="h-full bg-primary w-4/5"></div></div><div class="flex items-center justify-between pt-1"><span class="font-micro-label text-micro-label text-text-secondary uppercase">POLAR ORBITER-7</span><span class="inline-block w-1.5 h-1.5 bg-primary"></span></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Dynamic Activation Script for App Shell Nav State -->
+<script>
+    (function syncNavState() {
+      const links = document.querySelectorAll('aside nav a');
+      links.forEach(link => {
+        if (link.getAttribute('data-path') === 'alerts') {
+          link.classList.add('bg-primary-container', 'text-on-primary', 'font-bold', 'border-l-2', 'border-primary');
+          link.classList.remove('text-on-surface-variant');
+        } else {
+          link.classList.remove('bg-primary-container', 'text-on-primary', 'font-bold', 'border-l-2', 'border-primary');
+        }
+      });
+    })();
+  </script>
+<!-- Command Top Strip (Header & Quick Triage Controls) -->
+<header class="w-full bg-surface-raised border-b border-border-subtle px-grid-margin py-panel-pad-compact flex flex-wrap items-center justify-between gap-gutter-md">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-gutter-xs text-text-muted font-micro-label text-micro-label tracking-wider uppercase">
+<span>TACTICAL TELEMETRY &amp; EVENT MONITOR</span>
+<span class="text-primary font-bold">/</span>
+<span class="text-text-secondary">SECTOR: PRYDZ BAY → MAITRI [GRID-ARC-09]</span>
+</div>
+<div class="flex items-baseline gap-gutter-md">
+<h1 class="font-headline-lg text-headline-lg text-text-primary uppercase tracking-tight">TACTICAL ALERTS &amp; EVENT STREAM</h1>
+<span class="hidden md:inline text-text-secondary font-body-sm text-body-sm">Real-time sensor anomalies, collision vectors, and algorithmic hazard flags.</span>
+</div>
+</div>
+<!-- Global Threat Strip & Action Bar -->
+<div class="flex items-center gap-gutter-sm">
+<!-- Auto-Acknowledge Toggle -->
+<label class="flex items-center gap-gutter-xs px-panel-pad-compact py-1.5 bg-surface-container-lowest border border-border-subtle cursor-pointer hover:border-border-active transition-colors">
+<input class="sr-only peer" id="autoAckToggle" type="checkbox"/>
+<div class="w-7 h-3.5 bg-surface-container-high peer-checked:bg-primary-container relative transition-colors">
+<div class="w-2.5 h-2.5 bg-text-primary peer-checked:bg-on-primary absolute top-0.5 left-0.5 peer-checked:left-3.5 transition-all"></div>
+</div>
+<span class="font-micro-label text-micro-label text-text-secondary peer-checked:text-primary uppercase tracking-wider">AUTO-ACK LOW</span>
+</label>
+<!-- Silence Audio Beacons -->
+<button class="flex items-center gap-gutter-xs px-panel-pad-compact py-1.5 bg-surface-container-lowest border border-border-subtle hover:border-status-danger text-text-secondary hover:text-status-danger font-micro-label text-micro-label uppercase tracking-wider transition-colors" id="silenceAudioBtn" onclick="toggleAudioBeacon(this)">
+<span class="material-symbols-outlined text-[15px] text-status-danger">volume_off</span>
+<span>SILENCE AUDIO (15M)</span>
+</button>
+<!-- Export Syslog -->
+<button class="flex items-center gap-gutter-xs px-panel-pad-compact py-1.5 bg-primary text-on-primary font-headline-sm text-micro-label uppercase tracking-widest hover:shadow-[0_0_12px_rgba(34,211,238,0.45)] transition-all" onclick="exportAlertTelemetry()">
+<span class="material-symbols-outlined text-[15px]">file_download</span>
+<span>EXPORT SYSLOG/JSON</span>
+</button>
+</div>
+</header>
+<!-- 3-Column Operational Command Bay -->
+<div class="w-full p-grid-margin grid grid-cols-1 xl:grid-cols-12 gap-gutter-md">
+<!-- COLUMN 1: Alert Filtering & Triage (~20% -> 3 cols) -->
+<aside class="xl:col-span-3 flex flex-col gap-gutter-md">
+<!-- Search & Classification Card -->
+<div class="bg-surface-panel border border-border-subtle backdrop-blur-md flex flex-col">
+<div class="px-panel-pad-compact py-2 bg-surface-raised border-b border-border-subtle flex items-center justify-between">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-primary text-[16px]">tune</span>
+<span class="font-headline-sm text-micro-label text-text-primary uppercase tracking-widest">FEED FILTER &amp; TRIAGE</span>
+</div>
+<span class="font-telemetry-code text-micro-label text-text-muted">SUBSYS-v3</span>
+</div>
+<div class="p-panel-pad-compact flex flex-col gap-gutter-md">
+<!-- Live Input Query -->
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border border-border-subtle px-2.5 py-1.5 text-text-primary font-telemetry-code text-telemetry-code placeholder:text-text-muted focus:border-primary focus:outline-none transition-colors" id="alertSearchInput" placeholder="Filter by tag, sector, ID..." type="text"/>
+<span class="material-symbols-outlined absolute right-2 top-2 text-text-muted text-[16px]">search</span>
+</div>
+<!-- Severity Filter Chips -->
+<div class="flex flex-col gap-1.5">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">SEVERITY THRESHOLD</span>
+<button class="severity-pill w-full flex items-center justify-between px-2 py-1.5 bg-accent-cyan-dim border border-primary text-primary font-telemetry-code text-telemetry-code font-bold text-left transition-all" onclick="filterSeverity('all')">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-primary"></span>
+                ALL INCIDENTS
+              </span>
+<span class="bg-primary/20 px-1 text-primary">28</span>
+</button>
+<button class="severity-pill w-full flex items-center justify-between px-2 py-1.5 bg-error-container/20 border border-status-danger/40 text-status-danger hover:border-status-danger font-telemetry-code text-telemetry-code font-bold text-left transition-all" onclick="filterSeverity('critical')">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-status-danger animate-pulse"></span>
+                CRITICAL / STOP-PROP
+              </span>
+<span class="bg-status-danger text-on-error px-1 font-bold">03</span>
+</button>
+<button class="severity-pill w-full flex items-center justify-between px-2 py-1.5 bg-status-caution/10 border border-status-caution/40 text-status-caution hover:border-status-caution font-telemetry-code text-telemetry-code font-semibold text-left transition-all" onclick="filterSeverity('warning')">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-status-caution"></span>
+                WARNING / ELEVATED
+              </span>
+<span class="bg-status-caution/20 px-1 text-status-caution">09</span>
+</button>
+<button class="severity-pill w-full flex items-center justify-between px-2 py-1.5 bg-status-telemetry/10 border border-status-telemetry/40 text-status-telemetry hover:border-status-telemetry font-telemetry-code text-telemetry-code font-semibold text-left transition-all" onclick="filterSeverity('info')">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 bg-status-telemetry"></span>
+                ADVISORY / TELEMETRY
+              </span>
+<span class="bg-status-telemetry/20 px-1 text-status-telemetry">16</span>
+</button>
+</div>
+<!-- Subsystem Checklist -->
+<div class="flex flex-col gap-2 pt-1 border-t border-border-subtle">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">INSTRUMENT BUS MASK</span>
+<label class="flex items-center justify-between text-body-sm text-text-secondary hover:text-text-primary cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="accent-primary rounded-none bg-surface-container-lowest border-border-subtle" type="checkbox"/>
+<span class="font-telemetry-code text-telemetry-code">Radar &amp; SAR Sentinel-1C</span>
+</div>
+<span class="font-micro-label text-micro-label text-primary">LIVE</span>
+</label>
+<label class="flex items-center justify-between text-body-sm text-text-secondary hover:text-text-primary cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="accent-primary rounded-none bg-surface-container-lowest border-border-subtle" type="checkbox"/>
+<span class="font-telemetry-code text-telemetry-code">Acoustic CPA &amp; Sonar</span>
+</div>
+<span class="font-micro-label text-micro-label text-status-safe">ACTIVE</span>
+</label>
+<label class="flex items-center justify-between text-body-sm text-text-secondary hover:text-text-primary cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="accent-primary rounded-none bg-surface-container-lowest border-border-subtle" type="checkbox"/>
+<span class="font-telemetry-code text-telemetry-code">Sea-Ice Strain Gauges</span>
+</div>
+<span class="font-micro-label text-micro-label text-status-danger font-bold">ALERT</span>
+</label>
+<label class="flex items-center justify-between text-body-sm text-text-secondary hover:text-text-primary cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="accent-primary rounded-none bg-surface-container-lowest border-border-subtle" type="checkbox"/>
+<span class="font-telemetry-code text-telemetry-code">Katabatic Wind Arrays</span>
+</div>
+<span class="font-micro-label text-micro-label text-status-caution font-bold">GALE</span>
+</label>
+<label class="flex items-center justify-between text-body-sm text-text-secondary hover:text-text-primary cursor-pointer">
+<div class="flex items-center gap-2">
+<input checked="" class="accent-primary rounded-none bg-surface-container-lowest border-border-subtle" type="checkbox"/>
+<span class="font-telemetry-code text-telemetry-code">PC-5 Hull Structural FEA</span>
+</div>
+<span class="font-micro-label text-micro-label text-status-safe">NOMINAL</span>
+</label>
+</div>
+<!-- Bottom Action -->
+<div class="pt-2 border-t border-border-subtle">
+<button class="w-full py-1.5 border border-border-subtle text-text-muted hover:text-text-primary hover:border-text-secondary font-headline-sm text-micro-label uppercase tracking-widest transition-colors flex items-center justify-center gap-1.5" onclick="clearResolved()">
+<span class="material-symbols-outlined text-[14px]">cleaning_services</span>
+<span>PURGE RESOLVED ENTRIES</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quick Action Protocol Card -->
+<div class="bg-surface-raised border border-border-subtle p-panel-pad-compact flex flex-col gap-2">
+<div class="flex items-center justify-between text-micro-label font-micro-label text-text-muted uppercase">
+<span>OPERATIONAL ESCALATION RULE</span>
+<span class="text-status-danger font-bold">SOP-POL-04</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+          Unacknowledged critical threats spanning &gt;10 min trigger automated throttle reduction to DEAD SLOW (3 kn) and notify Maitri Base Radio.
+        </p>
+<div class="flex items-center justify-between pt-1 font-telemetry-code text-micro-label text-status-caution">
+<span>DEAD-MAN TIMER: 07:46</span>
+<span class="material-symbols-outlined text-[14px] text-status-caution">timer</span>
+</div>
+</div>
+</aside>
+<!-- COLUMN 2: Live Operational Alert Feed (~50% -> 6 cols) -->
+<main class="xl:col-span-6 flex flex-col gap-gutter-sm">
+<!-- Stream Header -->
+<div class="bg-surface-raised border border-border-subtle px-panel-pad-compact py-2 flex items-center justify-between">
+<div class="flex items-center gap-gutter-sm">
+<span class="font-headline-sm text-headline-sm text-text-primary uppercase tracking-wider">INCIDENT BUFFER</span>
+<div class="flex items-center gap-1 px-1.5 py-0.5 bg-error-container/40 border border-status-danger text-status-danger font-micro-label text-micro-label font-bold">
+<span class="w-2 h-2 bg-status-danger inline-block animate-pulse"></span>
+<span>3 UNACKNOWLEDGED CRITICAL</span>
+</div>
+</div>
+<div class="flex items-center gap-gutter-xs text-text-secondary font-telemetry-code text-micro-label">
+<span>DISPATCH LOG:</span>
+<span class="text-primary font-bold">FEED//S1-ANTARCTIC</span>
+</div>
+</div>
+<!-- Feed Container -->
+<div class="flex flex-col gap-gutter-sm overflow-y-auto max-h-[850px] pr-1" id="alertFeedList">
+<!-- ROW 1: CRITICAL (Iceberg Collision) -->
+<div class="alert-item group bg-surface-panel border border-status-danger/60 border-l-[4px] border-l-status-danger p-panel-pad-compact relative overflow-hidden transition-all hover:bg-surface-container-high/60 shadow-[0_0_16px_rgba(248,113,113,0.12)]">
+<div class="absolute top-0 right-0 px-2 py-0.5 bg-status-danger text-on-error font-micro-label text-micro-label font-bold tracking-widest uppercase">
+            CRITICAL THREAT • UNACKNOWLEDGED
+          </div>
+<div class="flex items-start gap-gutter-sm mt-2">
+<div class="w-8 h-8 bg-error-container/50 border border-status-danger flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-status-danger text-[20px]">warning</span>
+</div>
+<div class="flex flex-col gap-1.5 w-full">
+<div class="flex flex-wrap items-baseline justify-between gap-1 pr-32">
+<span class="font-headline-sm text-headline-sm text-text-primary uppercase tracking-tight">COLLISION THREAT: Tabular Iceberg A17 Trajectory Convergence</span>
+</div>
+<p class="font-body-md text-body-md text-text-primary leading-relaxed">
+                Closest Point of Approach (CPA) projected at <span class="text-status-danger font-bold">1.8 NM</span> in Sector C-4 at <span class="text-text-primary font-bold">T+31h</span>. Drift acceleration driven by 3.2 kn subsurface circumpolar current. Impact energy vector exceeds vessel PC-5 ice-belt structural limit.
+              </p>
+<!-- Telemetry Metadata Badges -->
+<div class="flex flex-wrap items-center gap-1.5 my-1">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">SECTOR: <span class="text-text-primary font-bold">C-4</span></span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">SAR TARGET: <span class="text-primary font-bold">A17-TABULAR</span></span>
+<span class="px-1.5 py-0.5 bg-error-container/30 border border-status-danger/40 font-telemetry-code text-micro-label text-status-danger font-bold">COLLISION PROB: 72%</span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">MASS EST: 4.8 MT</span>
+</div>
+<!-- Action Bar / Footer -->
+<div class="flex flex-wrap items-center justify-between gap-gutter-sm pt-2 border-t border-border-subtle">
+<span class="font-telemetry-code text-micro-label text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-status-danger">schedule</span>
+                  06:28:14 UTC (2m ago)
+                </span>
+<div class="flex items-center gap-2">
+<button class="ack-btn px-2.5 py-1 border border-primary text-primary hover:bg-primary-container hover:text-on-primary font-headline-sm text-micro-label uppercase tracking-wider transition-colors" onclick="acknowledgeAlert(this, 'A17-COLLISION')">
+                    Acknowledge
+                  </button>
+<button class="px-3 py-1 bg-status-danger text-on-error hover:bg-error font-headline-sm text-micro-label uppercase tracking-widest font-bold transition-all shadow-[0_0_10px_rgba(248,113,113,0.35)] flex items-center gap-1">
+<span>Dispatch Mitigations</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 2: CRITICAL (Compressive Ice Pressure) -->
+<div class="alert-item group bg-surface-panel border border-status-danger/60 border-l-[4px] border-l-status-danger p-panel-pad-compact relative overflow-hidden transition-all hover:bg-surface-container-high/60 shadow-[0_0_16px_rgba(248,113,113,0.12)]">
+<div class="absolute top-0 right-0 px-2 py-0.5 bg-status-danger text-on-error font-micro-label text-micro-label font-bold tracking-widest uppercase">
+            CRITICAL THREAT • UNACKNOWLEDGED
+          </div>
+<div class="flex items-start gap-gutter-sm mt-2">
+<div class="w-8 h-8 bg-error-container/50 border border-status-danger flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-status-danger text-[20px]">compress</span>
+</div>
+<div class="flex flex-col gap-1.5 w-full">
+<div class="flex flex-wrap items-baseline justify-between gap-1 pr-32">
+<span class="font-headline-sm text-headline-sm text-text-primary uppercase tracking-tight">COMPRESSIVE ICE PRESSURE: Lead Closure Warning in Prydz Bay</span>
+</div>
+<p class="font-body-md text-body-md text-text-primary leading-relaxed">
+                Severe convergence ridge formation detected by Sentinel-1C SAR. Multi-year pack closing navigable leads at <span class="text-status-danger font-bold">0.8 kn eastward shear</span>. Risk of besetting within 4 hours if forward vector is maintained.
+              </p>
+<!-- Telemetry Metadata Badges -->
+<div class="flex flex-wrap items-center gap-1.5 my-1">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">ZONE: <span class="text-text-primary font-bold">PRYDZ BAY EAST</span></span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">FLOE THICKNESS: <span class="text-status-caution font-bold">&gt;2.2m</span></span>
+<span class="px-1.5 py-0.5 bg-error-container/30 border border-status-danger/40 font-telemetry-code text-micro-label text-status-danger font-bold">CONVERGENCE: 81%</span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">BESET HAZARD: HIGH</span>
+</div>
+<!-- Action Bar / Footer -->
+<div class="flex flex-wrap items-center justify-between gap-gutter-sm pt-2 border-t border-border-subtle">
+<span class="font-telemetry-code text-micro-label text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-status-danger">schedule</span>
+                  06:14:02 UTC (16m ago)
+                </span>
+<div class="flex items-center gap-2">
+<button class="ack-btn px-2.5 py-1 border border-primary text-primary hover:bg-primary-container hover:text-on-primary font-headline-sm text-micro-label uppercase tracking-wider transition-colors" onclick="acknowledgeAlert(this, 'LEAD-CLOSURE')">
+                    Acknowledge
+                  </button>
+<button class="px-2.5 py-1 border border-border-active bg-surface-container text-text-primary hover:border-primary font-headline-sm text-micro-label uppercase tracking-wider transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">alt_route</span>
+<span>Compute Re-Route Options</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 3: CRITICAL (Katabatic Gale Surge) -->
+<div class="alert-item group bg-surface-panel border border-status-danger/60 border-l-[4px] border-l-status-danger p-panel-pad-compact relative overflow-hidden transition-all hover:bg-surface-container-high/60 shadow-[0_0_16px_rgba(248,113,113,0.12)]">
+<div class="absolute top-0 right-0 px-2 py-0.5 bg-status-danger text-on-error font-micro-label text-micro-label font-bold tracking-widest uppercase">
+            CRITICAL THREAT • UNACKNOWLEDGED
+          </div>
+<div class="flex items-start gap-gutter-sm mt-2">
+<div class="w-8 h-8 bg-error-container/50 border border-status-danger flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-status-danger text-[20px]">air</span>
+</div>
+<div class="flex flex-col gap-1.5 w-full">
+<div class="flex flex-wrap items-baseline justify-between gap-1 pr-32">
+<span class="font-headline-sm text-headline-sm text-text-primary uppercase tracking-tight">KATABATIC GALE SURGE: Gusts Exceeding 48 kn Expected</span>
+</div>
+<p class="font-body-md text-body-md text-text-primary leading-relaxed">
+                Amery Ice Shelf katabatic outflow boundary rapidly propagating northward. Temperature plunging to <span class="text-primary font-bold">-26°C</span> with severe topside sea-spray icing risk. Superstructure stability threshold margin: 14%.
+              </p>
+<!-- Telemetry Metadata Badges -->
+<div class="flex flex-wrap items-center gap-1.5 my-1">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">ORIGIN: <span class="text-text-primary font-bold">AMERY ICE SHELF</span></span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">VISIBILITY: <span class="text-status-danger font-bold">&lt; 1.2 NM</span></span>
+<span class="px-1.5 py-0.5 bg-error-container/30 border border-status-danger/40 font-telemetry-code text-micro-label text-status-danger font-bold">SUSTAINED: 48 kn</span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">ICING: SEVERE</span>
+</div>
+<!-- Action Bar / Footer -->
+<div class="flex flex-wrap items-center justify-between gap-gutter-sm pt-2 border-t border-border-subtle">
+<span class="font-telemetry-code text-micro-label text-text-muted flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-status-danger">schedule</span>
+                  05:52:19 UTC (38m ago)
+                </span>
+<div class="flex items-center gap-2">
+<button class="ack-btn px-2.5 py-1 border border-primary text-primary hover:bg-primary-container hover:text-on-primary font-headline-sm text-micro-label uppercase tracking-wider transition-colors" onclick="acknowledgeAlert(this, 'KATABATIC-GALE')">
+                    Acknowledge
+                  </button>
+<button class="px-2.5 py-1 bg-surface-container border border-border-subtle text-text-secondary hover:text-text-primary font-headline-sm text-micro-label uppercase tracking-wider transition-colors">
+                    Anti-Icing Heat Sinks ON
+                  </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 4: WARNING (Sat-Link Latency - Acknowledged) -->
+<div class="alert-item group bg-surface-container-low border border-border-subtle border-l-[3px] border-l-status-caution p-panel-pad-compact relative transition-all hover:bg-surface-container/70">
+<div class="flex items-start gap-gutter-sm">
+<div class="w-8 h-8 bg-status-caution/10 border border-status-caution/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-status-caution text-[18px]">satellite_alt</span>
+</div>
+<div class="flex flex-col gap-1.5 w-full">
+<div class="flex flex-wrap items-baseline justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-text-primary uppercase tracking-tight">SAR Sat-Link Telemetry Latency Elevated</span>
+<span class="px-1.5 py-0.5 bg-status-safe/10 border border-status-safe/30 text-status-safe font-micro-label text-micro-label">ACK: LT. CMDR VANCE (05:20 UTC)</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                Downlink latency spiked to 42 ms on Polar Orbiter-7. Synthetic aperture radar refresh frame delayed by +4.2 minutes due to auroral ionospheric disturbance.
+              </p>
+<!-- Metadata Badges -->
+<div class="flex flex-wrap items-center gap-1.5 my-0.5">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">SYSTEM: <span class="text-text-primary">ORBITER-7</span></span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">LATENCY: <span class="text-status-caution font-bold">42 ms</span></span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">PACKET LOSS: 0.8%</span>
+</div>
+<div class="flex items-center justify-between pt-1 font-telemetry-code text-micro-label text-text-muted">
+<span>05:11:40 UTC (1h 18m ago)</span>
+<span class="text-primary font-bold">CARRIER FREQ: 14.24 GHz (KU-BAND)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 5: WARNING (Forward Sonar - Acknowledged) -->
+<div class="alert-item group bg-surface-container-low border border-border-subtle border-l-[3px] border-l-status-caution p-panel-pad-compact relative transition-all hover:bg-surface-container/70">
+<div class="flex items-start gap-gutter-sm">
+<div class="w-8 h-8 bg-status-caution/10 border border-status-caution/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-status-caution text-[18px]">sensors</span>
+</div>
+<div class="flex flex-col gap-1.5 w-full">
+<div class="flex flex-wrap items-baseline justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-text-primary uppercase tracking-tight">Forward Sonar Acoustic Range Attenuation</span>
+<span class="px-1.5 py-0.5 bg-surface-container-high border border-border-subtle text-text-secondary font-micro-label text-micro-label">ACK: SYS-AUTO (04:36 UTC)</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary leading-relaxed">
+                High ambient hydroacoustic cavitation from pack-ice fracturing causing 18% acoustic attenuation on forward array. Sub-surface growler detection confidence reduced to 82%.
+              </p>
+<!-- Metadata Badges -->
+<div class="flex flex-wrap items-center gap-1.5 my-0.5">
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">DEVICE: <span class="text-text-primary">SONAR ARRAY-B</span></span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">ATTENUATION: <span class="text-status-caution font-bold">18%</span></span>
+<span class="px-1.5 py-0.5 bg-surface-container-lowest border border-border-subtle font-telemetry-code text-micro-label text-text-secondary">FILTER: NOTCH 24kHz</span>
+</div>
+<div class="flex items-center justify-between pt-1 font-telemetry-code text-micro-label text-text-muted">
+<span>04:35:10 UTC (1h 55m ago)</span>
+<span class="text-text-secondary">CALIBRATION RUN IN: 25 MIN</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ROW 6: INFO / RESOLVED (Data Ingest) -->
+<div class="alert-item group bg-surface-container-lowest border border-border-subtle border-l-[3px] border-l-status-telemetry p-panel-pad-compact relative opacity-80 hover:opacity-100 transition-all">
+<div class="flex items-start gap-gutter-sm">
+<div class="w-8 h-8 bg-status-telemetry/10 border border-status-telemetry/30 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-status-telemetry text-[18px]">cloud_sync</span>
+</div>
+<div class="flex flex-col gap-1 w-full">
+<div class="flex flex-wrap items-baseline justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-text-secondary uppercase tracking-tight">Sentinel-1C Swath Data Synchronized</span>
+<span class="px-1.5 py-0.5 bg-status-safe/10 border border-status-safe/30 text-status-safe font-micro-label text-micro-label font-bold">RESOLVED</span>
+</div>
+<p class="font-body-sm text-body-sm text-text-muted leading-relaxed">
+                400 km SAR composite successfully ingested into IceNet Bayesian predictor model. Bathymetry overlay updated with zero vector discrepancies.
+              </p>
+<!-- Metadata Badges -->
+<div class="flex flex-wrap items-center gap-1.5 my-0.5">
+<span class="px-1.5 py-0.5 bg-surface-container-low border border-border-subtle font-telemetry-code text-micro-label text-text-muted">FEED: ESA-COPERNICUS</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low border border-border-subtle font-telemetry-code text-micro-label text-text-muted">SWATH: 400 KM</span>
+<span class="px-1.5 py-0.5 bg-surface-container-low border border-border-subtle font-telemetry-code text-micro-label text-text-muted">STATUS: VERIFIED</span>
+</div>
+<div class="flex items-center justify-between pt-1 font-telemetry-code text-micro-label text-text-muted">
+<span>04:00:00 UTC (2h 30m ago)</span>
+<span class="text-status-telemetry">MODEL CONFIDENCE: 98.4%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- COLUMN 3: Alert Analytics & Telemetry (~25% -> 3 cols) -->
+<aside class="xl:col-span-3 flex flex-col gap-gutter-md">
+<!-- Top Primary KPI Card -->
+<div class="bg-surface-panel border border-border-subtle p-panel-pad-compact relative overflow-hidden">
+<div class="flex items-center justify-between pb-1 border-b border-border-subtle">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">CRITICAL UNACKNOWLEDGED</span>
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 bg-status-danger inline-block animate-ping"></span>
+<span class="font-micro-label text-micro-label text-status-danger uppercase font-bold">WATCH ACTION REQ</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-3">
+<div class="font-stat-metric text-stat-metric text-status-danger tracking-tight tabular-nums font-bold">03</div>
+<div class="flex flex-col items-end">
+<span class="font-telemetry-code text-micro-label text-status-danger uppercase font-bold">HIGH RISK VECTOR</span>
+<span class="font-micro-label text-micro-label text-text-muted">CPA &lt; 2.0 NM</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-lowest h-1.5 mt-2 overflow-hidden">
+<div class="bg-status-danger h-full w-3/4 animate-pulse"></div>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted block mt-1.5">Immediate duty officer sign-off required per Polar Code Regulation 12.</span>
+</div>
+<!-- Secondary MTTA Metric Card -->
+<div class="bg-surface-raised border border-border-subtle p-panel-pad-compact">
+<div class="flex items-center justify-between pb-1 border-b border-border-subtle">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">MEAN TIME TO ACKNOWLEDGE (MTTA)</span>
+<span class="material-symbols-outlined text-status-safe text-[16px]">speed</span>
+</div>
+<div class="flex items-baseline justify-between mt-2">
+<div class="font-stat-metric text-stat-metric text-status-safe tracking-tight tabular-nums font-bold">4.2 <span class="text-body-md font-normal text-text-secondary">min</span></div>
+<div class="px-1.5 py-0.5 bg-status-safe/10 border border-status-safe/40 text-status-safe font-telemetry-code text-micro-label font-bold">
+            -1.8m VS 7D AVG
+          </div>
+</div>
+<div class="flex items-center justify-between mt-2 pt-2 border-t border-border-subtle font-telemetry-code text-micro-label text-text-muted">
+<span>SLA CEILING: 10.0m</span>
+<span class="text-status-safe">COMPLIANT (99.2%)</span>
+</div>
+</div>
+<!-- Alert Volume Distribution Chart (24h Buckets) -->
+<div class="bg-surface-panel border border-border-subtle p-panel-pad-compact flex flex-col gap-2">
+<div class="flex items-center justify-between border-b border-border-subtle pb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">bar_chart</span>
+<span class="font-headline-sm text-micro-label text-text-primary uppercase tracking-widest">24-HOUR INCIDENT DENSITY</span>
+</div>
+<span class="font-telemetry-code text-micro-label text-status-danger">PEAK: 06:00 UTC</span>
+</div>
+<div class="py-1">
+<!-- Inline Custom SVG Bar Chart -->
+<svg class="w-full h-24" preserveaspectratio="none" viewbox="0 0 240 80">
+<!-- Grid Lines -->
+<line stroke="#16263C" stroke-dasharray="2 2" stroke-width="1" x1="0" x2="240" y1="20" y2="20"></line>
+<line stroke="#16263C" stroke-dasharray="2 2" stroke-width="1" x1="0" x2="240" y1="50" y2="50"></line>
+<!-- 12 x 2-hour Bars -->
+<!-- 08-10 -->
+<rect fill="#60A5FA" height="15" opacity="0.6" width="14" x="5" y="60"></rect>
+<!-- 10-12 -->
+<rect fill="#60A5FA" height="23" opacity="0.6" width="14" x="25" y="52"></rect>
+<!-- 12-14 -->
+<rect fill="#60A5FA" height="10" opacity="0.6" width="14" x="45" y="65"></rect>
+<!-- 14-16 -->
+<rect fill="#FACC15" height="30" opacity="0.7" width="14" x="65" y="45"></rect>
+<!-- 16-18 -->
+<rect fill="#60A5FA" height="20" opacity="0.6" width="14" x="85" y="55"></rect>
+<!-- 18-20 -->
+<rect fill="#60A5FA" height="13" opacity="0.6" width="14" x="105" y="62"></rect>
+<!-- 20-22 -->
+<rect fill="#FACC15" height="27" opacity="0.8" width="14" x="125" y="48"></rect>
+<!-- 22-00 -->
+<rect fill="#60A5FA" height="17" opacity="0.6" width="14" x="145" y="58"></rect>
+<!-- 00-02 -->
+<rect fill="#FACC15" height="35" opacity="0.8" width="14" x="165" y="40"></rect>
+<!-- 02-04 -->
+<rect fill="#FACC15" height="43" opacity="0.9" width="14" x="185" y="32"></rect>
+<!-- 04-06 (Spike) -->
+<rect class="animate-pulse" fill="#F87171" height="65" width="14" x="205" y="10"></rect>
+<!-- 06-08 (Current) -->
+<rect fill="#F87171" height="51" width="14" x="225" y="24"></rect>
+</svg>
+<!-- Timeline Labels -->
+<div class="flex justify-between font-telemetry-code text-[9px] text-text-muted pt-1">
+<span>08:00</span>
+<span>14:00</span>
+<span>20:00</span>
+<span>02:00</span>
+<span class="text-primary font-bold">NOW</span>
+</div>
+</div>
+<div class="px-2 py-1 bg-surface-container-lowest border border-border-subtle flex items-center justify-between text-micro-label font-micro-label">
+<span class="text-text-secondary">PEAK SURGE CALLOUT:</span>
+<span class="text-status-danger font-bold">7 EVENTS IN 06:00 BUCKET</span>
+</div>
+</div>
+<!-- Subsystem Severity Breakdown Matrix -->
+<div class="bg-surface-raised border border-border-subtle p-panel-pad-compact flex flex-col gap-2.5">
+<div class="flex items-center justify-between border-b border-border-subtle pb-1">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">SUBSYSTEM PROPORTION</span>
+<span class="font-telemetry-code text-micro-label text-primary">N=28</span>
+</div>
+<!-- Metric Bars -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-telemetry-code text-micro-label">
+<span class="text-text-secondary">1. Navigation / Iceberg Proximity</span>
+<span class="text-primary font-bold">42%</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1">
+<div class="bg-primary h-full w-[42%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-telemetry-code text-micro-label">
+<span class="text-text-secondary">2. Katabatic / Oceanographic</span>
+<span class="text-status-caution font-bold">28%</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1">
+<div class="bg-status-caution h-full w-[28%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-telemetry-code text-micro-label">
+<span class="text-text-secondary">3. PC-5 Hull Strain &amp; Pressure</span>
+<span class="text-status-danger font-bold">18%</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1">
+<div class="bg-status-danger h-full w-[18%]"></div>
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between font-telemetry-code text-micro-label">
+<span class="text-text-secondary">4. Satellite Comms &amp; Link</span>
+<span class="text-status-telemetry font-bold">12%</span>
+</div>
+<div class="w-full bg-surface-container-lowest h-1">
+<div class="bg-status-telemetry h-full w-[12%]"></div>
+</div>
+</div>
+</div>
+<!-- Tactical Audio Beacon & Horn Controller -->
+<div class="bg-surface-panel border border-border-subtle p-panel-pad-compact flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[16px]">campaign</span>
+<span class="font-headline-sm text-micro-label text-text-primary uppercase tracking-wider">AUDIO BEACON STATUS</span>
+</div>
+<span class="px-1.5 py-0.2 bg-status-safe/10 border border-status-safe/40 text-status-safe font-micro-label text-[9px] uppercase">ARMED</span>
+</div>
+<div class="grid grid-cols-2 gap-1.5 pt-1">
+<button class="py-1 bg-surface-container border border-border-subtle text-text-secondary hover:text-primary hover:border-primary font-telemetry-code text-micro-label uppercase transition-colors" onclick="testAudioTone()">
+            PULSE TEST (1kHz)
+          </button>
+<button class="py-1 bg-surface-container border border-border-subtle text-status-danger hover:border-status-danger font-telemetry-code text-micro-label uppercase transition-colors" onclick="overrideSiren()">
+            FORCE KLAXON
+          </button>
+</div>
+<span class="font-telemetry-code text-[10px] text-text-muted">ACOUSTIC OUTPUT LEVEL: 85 dB (BRIDGE/DECK-2)</span>
+</div>
+</aside>
+</div>
+<!-- Operational Status Bar Footer -->
+<footer class="w-full bg-surface-raised border-t border-border-subtle px-grid-margin py-1.5 flex flex-wrap items-center justify-between text-micro-label font-micro-label text-text-muted">
+<div class="flex items-center gap-gutter-md">
+<span class="flex items-center gap-1 text-primary">
+<span class="w-1.5 h-1.5 bg-primary"></span>
+        DISPATCH LOOP: SYNCED 100ms
+      </span>
+<span>BUFFER MEMORY: 18.4 MB / 128 MB</span>
+<span>SECURE AUDIT HASH: SHA256//92D1-B89F</span>
+</div>
+<div class="flex items-center gap-gutter-sm text-text-secondary font-telemetry-code">
+<span>NCPOR POLARIS INCIDENT ENGINE v4.2</span>
+<span class="text-status-safe font-bold">ONLINE</span>
+</div>
+</footer>
+<!-- Interactive Terminal Micro-Logic -->
+<script>
+    function acknowledgeAlert(button, alertId) {
+      const card = button.closest('.alert-item');
+      if (!card) return;
+      
+      // Update styling to acknowledged state
+      card.classList.remove('border-status-danger/60', 'border-l-status-danger', 'shadow-[0_0_16px_rgba(248,113,113,0.12)]');
+      card.classList.add('border-border-subtle', 'border-l-status-caution', 'opacity-90');
+      
+      // Replace status badge
+      const badge = card.querySelector('.font-micro-label');
+      if (badge && badge.textContent.includes('CRITICAL')) {
+        badge.outerHTML = `<div class="absolute top-0 right-0 px-2 py-0.5 bg-status-safe text-on-primary font-micro-label text-micro-label font-bold tracking-widest uppercase">ACK: BRIDGE WATCH OFFICER (NOW)</div>`;
+      }
+      
+      // Transform button to acknowledged text
+      button.outerHTML = `<span class="px-2 py-0.5 bg-status-safe/10 border border-status-safe/40 text-status-safe font-telemetry-code text-micro-label font-bold">SIGNED OFF</span>`;
+    }
+
+    function toggleAudioBeacon(btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const label = btn.querySelector('span:last-child');
+      if (label.textContent.includes('SILENCE')) {
+        label.textContent = 'UNMUTE BEACON';
+        btn.classList.add('bg-status-danger/20', 'border-status-danger', 'text-status-danger');
+        if (icon) icon.textContent = 'volume_up';
+      } else {
+        label.textContent = 'SILENCE AUDIO (15M)';
+        btn.classList.remove('bg-status-danger/20', 'border-status-danger', 'text-status-danger');
+        if (icon) icon.textContent = 'volume_off';
+      }
+    }
+
+    function exportAlertTelemetry() {
+      const timestamp = new Date().toISOString();
+      const payload = {
+        mission: "POLARIS-PRYDZ-BAY",
+        exportedAt: timestamp,
+        activeCriticalCount: 3,
+        source: "Sentinel-1C / Sonar / Micro-met",
+        status: "EXPORTED_TO_LOCAL_SYSLOG"
+      };
+      alert("POLARIS TELEMETRY EXPORT:\n\n" + JSON.stringify(payload, null, 2));
+    }
+
+    function clearResolved() {
+      const feed = document.getElementById('alertFeedList');
+      const resolvedItems = feed.querySelectorAll('.alert-item');
+      resolvedItems.forEach(item => {
+        if (item.textContent.includes('RESOLVED')) {
+          item.remove();
+        }
+      });
+    }
+
+    function filterSeverity(type) {
+      const pills = document.querySelectorAll('.severity-pill');
+      pills.forEach(p => p.classList.remove('ring-1', 'ring-primary'));
+      event.currentTarget.classList.add('ring-1', 'ring-primary');
+
+      const items = document.querySelectorAll('.alert-item');
+      items.forEach(item => {
+        if (type === 'all') {
+          item.style.display = 'block';
+        } else if (type === 'critical') {
+          item.style.display = item.textContent.includes('CRITICAL THREAT') ? 'block' : 'none';
+        } else if (type === 'warning') {
+          item.style.display = (item.textContent.includes('Elevated') || item.textContent.includes('Attenuation')) ? 'block' : 'none';
+        } else if (type === 'info') {
+          item.style.display = item.textContent.includes('Synchronized') ? 'block' : 'none';
+        }
+      });
+    }
+
+    function testAudioTone() {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(880, audioCtx.currentTime);
+        gain.gain.setValueAtTime(0.08, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.3);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + 0.3);
+      } catch (e) {
+        console.warn("WebAudio disabled or blocked");
+      }
+    }
+
+    function overrideSiren() {
+      alert("EMERGENCY KLAXON TRIGGERED: General alarm sounded on Main Deck and Bridge.");
+    }
+
+    // Interactive Search Filtering
+    const searchInput = document.getElementById('alertSearchInput');
+    if (searchInput) {
+      searchInput.addEventListener('input', function(e) {
+        const query = e.target.value.toLowerCase();
+        const items = document.querySelectorAll('.alert-item');
+        items.forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = text.includes(query) ? 'block' : 'none';
+        });
+      });
+    }
+  </script>
+</div></main></div></body></html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-container-high":"#242a36","on-tertiary-container":"#454f60","status-telemetry":"#60A5FA","primary-fixed-dim":"#2fd9f4","surface-bright":"#333946","tertiary-container":"#b7c1d6","on-primary-container":"#005763","on-background":"#dde2f3","text-muted":"#64748B","surface-container-low":"#161c27","on-tertiary-fixed":"#121c2b","surface-container":"#1a202b","on-secondary-container":"#9fbae6","surface-container-highest":"#2f3541","tertiary":"#d3ddf2","surface-raised":"#0B1524","accent-cyan-dim":"rgba(34, 211, 238, 0.12)","text-primary":"#F1F5F9","surface-variant":"#2f3541","on-primary":"#00363e","on-error-container":"#ffdad6","text-secondary":"#94A3B8","border-active":"#1E3A5F","surface-container-lowest":"#080e19","outline-variant":"#3c494c","on-surface-variant":"#bbc9cd","surface-dim":"#0d131f","on-secondary-fixed-variant":"#2d486d","secondary-fixed":"#d5e3ff","error":"#ffb4ab","surface":"#0d131f","on-primary-fixed-variant":"#004e5a","error-container":"#93000a","on-primary-fixed":"#001f25","secondary":"#adc8f5","secondary-fixed-dim":"#adc8f5","surface-tint":"#2fd9f4","status-danger":"#F87171","on-secondary":"#133155","secondary-container":"#2f4a70","tertiary-fixed":"#d9e3f8","surface-panel":"rgba(16, 28, 46, 0.82)","accent-cyan-glow":"rgba(34, 211, 238, 0.35)","outline":"#859397","on-error":"#690005","primary-fixed":"#a2eeff","primary":"#8aebff","on-tertiary-fixed-variant":"#3e4758","background":"#0d131f","status-caution":"#FACC15","status-safe":"#4ADE80","border-subtle":"#16263C","inverse-on-surface":"#2a303d","inverse-surface":"#dde2f3","tertiary-fixed-dim":"#bdc7dc","on-tertiary":"#273141","on-surface":"#dde2f3","on-secondary-fixed":"#001c3b","primary-container":"#22d3ee","inverse-primary":"#006877"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-sm":"0.5rem","gutter-xs":"0.25rem","grid-margin":"1rem","panel-pad-compact":"0.75rem","panel-pad-dense":"0.5rem","gutter-lg":"1rem","panel-pad-loose":"1.25rem","gutter-md":"0.75rem","panel-pad-default":"1rem"},"fontFamily":{"display-hero":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"micro-label":["JetBrains Mono"],"telemetry-code":["JetBrains Mono"],"body-lg":["JetBrains Mono"],"body-sm":["JetBrains Mono"],"stat-metric-mobile":["JetBrains Mono"],"stat-metric":["JetBrains Mono"]},"fontSize":{"display-hero":["44px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-hero-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"30px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"600"}],"micro-label":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"600"}],"telemetry-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-lg":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"stat-metric-mobile":["24px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"stat-metric":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface select-none"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-raised border-b border-border-subtle"><div class="h-16 w-full px-grid-margin flex items-center justify-between gap-gutter-md"><div class="flex items-center gap-gutter-md min-w-[340px]"><img alt="POLARIS Polar Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UVElrj97vfNgzZpaxf_We33nkHUlU2G2ZLfnJHa6peu_SUmcSfd0IMfRehgOGrYxXoqbRyiXTrtoqy5TCsWAlnQAdc4fe5WadDpyw2C1xH4akH63RE4QHRcA-CZPatdXn30l3Gz81XHG8_PCov-hzCaJvPDz-BPbX_XXddSMJLGEDogOsg1sEdv05FMEqP0GJ35yvTarfDgT_7hf5ShPbZp3mTH1KmOR5fwWhp9Lfljve67hlDWam6hCjf"/><div class="flex flex-col"><div class="flex items-center gap-gutter-sm"><span class="font-headline-md text-headline-md font-bold tracking-tight text-text-primary uppercase">POLARIS</span><span class="px-1.5 py-0.5 bg-surface-container-high border border-border-subtle text-primary font-micro-label text-micro-label uppercase">NCPOR</span></div><span class="font-micro-label text-micro-label text-text-muted uppercase">AI-Enabled Antarctic Navigation &amp; Decision Support System</span></div></div><div class="hidden xl:flex items-center gap-gutter-sm"><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-primary text-[16px]">ac_unit</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">TEMP:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">-18°C</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-status-telemetry text-[16px]">air</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">WIND:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">25 km/h</span><span class="font-micro-label text-micro-label text-text-muted">SSE</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-secondary text-[16px]">visibility</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">VIS:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">5 km</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-primary text-[16px]">radar</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">SAR ICE:</span><span class="font-telemetry-code text-telemetry-code text-primary font-bold">SYNCED</span></div></div><div class="flex items-center gap-gutter-md"><div class="flex flex-col items-end"><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold tracking-wider">02 SEP 2026 06:30 UTC</span><div class="flex items-center gap-1.5"><span class="inline-block w-2 h-2 bg-status-safe animate-pulse"></span><span class="font-micro-label text-micro-label text-status-safe tracking-widest uppercase">SYSTEM ONLINE</span></div></div><div class="h-7 w-[1px] bg-border-subtle"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low border-r border-border-subtle z-40 flex flex-col justify-between"><div class="py-panel-pad-compact flex flex-col"><div class="px-panel-pad-compact pb-2 mb-2 border-b border-border-subtle flex items-center justify-between"><span class="font-micro-label text-micro-label text-text-muted tracking-widest uppercase">NAVIGATION STACK</span><span class="font-telemetry-code text-telemetry-code text-primary">GRID v4.2</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-bold border-l-2 border-primary"><a aria-current="page" class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 transition-colors bg-primary-container text-on-primary font-bold border-l-2 border-primary" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span>Dashboard</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mission-planner" href="#"><span class="material-symbols-outlined text-[18px]">explore</span>Mission Planner</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sea-ice-forecast" href="#"><span class="material-symbols-outlined text-[18px]">layers</span>Sea Ice Forecast</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="iceberg-tracker" href="#"><span class="material-symbols-outlined text-[18px]">radar</span>Iceberg Tracker</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="route-optimizer" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span>Route Optimizer</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="risk-analysis" href="#"><span class="material-symbols-outlined text-[18px]">warning</span>Risk Analysis</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weather-and-ocean" href="#"><span class="material-symbols-outlined text-[18px]">air</span>Weather &amp; Ocean</a><a class="flex items-center justify-between px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="alerts" href="#"><div class="flex items-center gap-gutter-sm"><span class="material-symbols-outlined text-[18px]">notifications_active</span>Alerts</div><span class="px-1.5 py-0.5 bg-error-container text-on-error-container font-micro-label text-micro-label font-bold">3</span></a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span>Reports</a></nav></div><div class="p-panel-pad-compact border-t border-border-subtle bg-surface-raised flex flex-col gap-gutter-xs"><div class="flex items-center justify-between text-text-muted font-micro-label text-micro-label uppercase"><span>SAT LINK LATENCY</span><span class="text-status-safe font-telemetry-code text-telemetry-code">42 ms</span></div><div class="w-full h-1 bg-border-subtle overflow-hidden"><div class="h-full bg-primary w-4/5"></div></div><div class="flex items-center justify-between pt-1"><span class="font-micro-label text-micro-label text-text-secondary uppercase">POLAR ORBITER-7</span><span class="inline-block w-1.5 h-1.5 bg-primary"></span></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Command Matrix Header Bar -->
+<div class="bg-surface-raised px-grid-margin py-panel-pad-compact flex flex-col xl:flex-row xl:items-center xl:justify-between gap-gutter-sm shadow-md">
+<div class="flex flex-col md:flex-row md:items-center gap-gutter-md">
+<div class="flex items-center gap-gutter-xs">
+<span class="w-2 h-2 bg-status-danger animate-ping"></span>
+<span class="font-headline-sm text-headline-sm text-text-primary tracking-tight uppercase">TACTICAL RISK ASSESSMENT &amp; MITIGATION MATRIX</span>
+</div>
+<div class="h-4 w-[1px] bg-border-active hidden md:block"></div>
+<div class="flex items-center gap-gutter-xs font-telemetry-code text-telemetry-code text-text-secondary">
+<span class="text-primary font-bold">ROUTE:</span>
+<span class="text-on-surface">BHARATI → MAITRI</span>
+<span class="text-text-muted">[SECTOR C-4 / PRYDZ BAY]</span>
+</div>
+</div>
+<div class="flex items-center gap-gutter-md">
+<span class="px-2 py-0.5 bg-secondary-container text-secondary font-micro-label text-micro-label uppercase font-bold tracking-wider">
+        PROBABILISTIC ENSEMBLE ACTIVE (100 RUNS)
+      </span>
+<div class="flex items-center gap-gutter-xs text-text-secondary font-telemetry-code text-telemetry-code">
+<span class="material-symbols-outlined text-[15px] text-primary">schedule</span>
+<span>CYCLE: 2026.09.02-B</span>
+<span class="text-primary font-bold">| RUN 04:12 UTC</span>
+</div>
+</div>
+</div>
+<!-- Main Viewport Workspace -->
+<div class="p-grid-margin flex flex-col gap-gutter-lg">
+<!-- 1. TOP ROW: 4 KPI THREAT CARDS -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter-md">
+<!-- KPI 1: Overall Mission Risk -->
+<div class="bg-surface-panel backdrop-blur-md p-panel-pad-loose flex flex-col justify-between shadow-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-status-danger"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">MISSION THREAT INDEX</span>
+<span class="font-headline-sm text-headline-sm text-text-primary mt-0.5">Overall Mission Risk</span>
+</div>
+<span class="px-1.5 py-0.5 bg-error-container text-error font-micro-label text-micro-label font-bold uppercase tracking-wider">
+            ELEVATED
+          </span>
+</div>
+<div class="flex items-center justify-between my-panel-pad-compact">
+<div class="flex flex-col">
+<span class="font-stat-metric text-stat-metric text-status-danger tracking-tighter tabular-nums">32%</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="font-telemetry-code text-telemetry-code text-status-danger font-bold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_up</span>+4.2%
+              </span>
+<span class="font-micro-label text-micro-label text-text-muted">vs yesterday</span>
+</div>
+</div>
+<!-- Gauge SVG -->
+<div class="relative w-16 h-16 flex items-center justify-center">
+<svg class="w-16 h-16 -rotate-90" viewbox="0 0 48 48">
+<circle class="text-surface-container-high" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-width="4"></circle>
+<circle class="text-status-danger" cx="24" cy="24" fill="none" r="20" stroke="currentColor" stroke-dasharray="125.6" stroke-dashoffset="85.4" stroke-linecap="butt" stroke-width="4"></circle>
+</svg>
+<span class="material-symbols-outlined text-status-danger text-[18px] absolute">warning</span>
+</div>
+</div>
+<div class="pt-panel-pad-dense bg-surface-container-lowest/50 px-panel-pad-dense mt-1">
+<span class="font-micro-label text-micro-label text-text-secondary tracking-tight">CRITICAL THRESHOLD: &gt;35% • PC-5 ICE CLASS LIMIT</span>
+</div>
+</div>
+<!-- KPI 2: Iceberg Encounters -->
+<div class="bg-surface-panel backdrop-blur-md p-panel-pad-loose flex flex-col justify-between shadow-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-status-caution"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">DRIFT INTERCEPTION</span>
+<span class="font-headline-sm text-headline-sm text-text-primary mt-0.5">Iceberg Encounters (prob.)</span>
+</div>
+<span class="px-1.5 py-0.5 bg-surface-container-high text-status-caution font-micro-label text-micro-label font-bold uppercase tracking-wider">
+            RADAR C-BAND
+          </span>
+</div>
+<div class="flex items-center justify-between my-panel-pad-compact">
+<div class="flex flex-col">
+<span class="font-stat-metric text-stat-metric text-status-caution tracking-tighter tabular-nums">2.4</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="font-telemetry-code text-telemetry-code text-status-caution font-bold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_up</span>+0.6
+              </span>
+<span class="font-micro-label text-micro-label text-text-muted">targets / 5 NM</span>
+</div>
+</div>
+<!-- Mini Sparkline Threat Map -->
+<div class="w-20 h-10 flex flex-col justify-end gap-1">
+<div class="flex items-end gap-1 h-8">
+<div class="w-2 bg-surface-container-high h-2"></div>
+<div class="w-2 bg-surface-container-high h-3"></div>
+<div class="w-2 bg-status-caution/60 h-5"></div>
+<div class="w-2 bg-status-caution h-7 animate-pulse"></div>
+<div class="w-2 bg-status-caution/40 h-4"></div>
+<div class="w-2 bg-surface-container-high h-3"></div>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted uppercase">CORRIDOR TRACE</span>
+</div>
+</div>
+<div class="pt-panel-pad-dense bg-surface-container-lowest/50 px-panel-pad-dense mt-1">
+<span class="font-micro-label text-micro-label text-text-secondary tracking-tight">EXPECTED TARGETS IN 5 NM CORRIDOR • A17 VECTOR</span>
+</div>
+</div>
+<!-- KPI 3: Sea-Ice Exposure -->
+<div class="bg-surface-panel backdrop-blur-md p-panel-pad-loose flex flex-col justify-between shadow-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-primary"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">CONCENTRATION RATIO</span>
+<span class="font-headline-sm text-headline-sm text-text-primary mt-0.5">Sea-Ice Exposure</span>
+</div>
+<span class="px-1.5 py-0.5 bg-accent-cyan-dim text-primary font-micro-label text-micro-label font-bold uppercase tracking-wider">
+            SAR VERIFIED
+          </span>
+</div>
+<div class="flex items-center justify-between my-panel-pad-compact">
+<div class="flex flex-col">
+<span class="font-stat-metric text-stat-metric text-primary tracking-tighter tabular-nums">42%</span>
+<div class="flex items-center gap-1 mt-1">
+<span class="font-telemetry-code text-telemetry-code text-status-safe font-bold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>-3.1%
+              </span>
+<span class="font-micro-label text-micro-label text-text-muted">vs yesterday</span>
+</div>
+</div>
+<!-- Mini Segmented Ice Metric -->
+<div class="w-20 flex flex-col gap-1">
+<div class="flex justify-between font-micro-label text-micro-label text-text-secondary">
+<span>PC-6</span>
+<span class="text-primary font-bold">7/10</span>
+</div>
+<div class="w-full h-2 bg-surface-container-high flex gap-0.5 overflow-hidden">
+<div class="h-full bg-status-safe w-2/5"></div>
+<div class="h-full bg-primary w-1/4"></div>
+<div class="h-full bg-surface-container w-1/3"></div>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted">CONCENTRATION &gt;0.7</span>
+</div>
+</div>
+<div class="pt-panel-pad-dense bg-surface-container-lowest/50 px-panel-pad-dense mt-1">
+<span class="font-micro-label text-micro-label text-text-secondary tracking-tight">MEAN CONCENTRATION &gt;7/10 COVERAGE ALONG TRACK</span>
+</div>
+</div>
+<!-- KPI 4: Weather Delays -->
+<div class="bg-surface-panel backdrop-blur-md p-panel-pad-loose flex flex-col justify-between shadow-xl relative overflow-hidden group">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-status-safe"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">SCHEDULE TOLERANCE</span>
+<span class="font-headline-sm text-headline-sm text-text-primary mt-0.5">Weather Delays</span>
+</div>
+<div class="flex items-center gap-1 px-1.5 py-0.5 bg-surface-container-high text-status-safe font-micro-label text-micro-label font-bold uppercase">
+<span class="w-1.5 h-1.5 bg-status-safe animate-pulse"></span> NOMINAL
+          </div>
+</div>
+<div class="flex items-center justify-between my-panel-pad-compact">
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1">
+<span class="font-stat-metric text-stat-metric text-status-safe tracking-tighter tabular-nums">6.5</span>
+<span class="font-headline-md text-headline-md text-status-safe font-bold">h</span>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">/ 72h window</span>
+</div>
+<div class="flex items-center gap-1 mt-1">
+<span class="font-telemetry-code text-telemetry-code text-status-safe font-bold flex items-center">
+<span class="material-symbols-outlined text-[14px]">arrow_drop_down</span>-1.2 h
+              </span>
+<span class="font-micro-label text-micro-label text-text-muted">improved margin</span>
+</div>
+</div>
+<div class="flex flex-col items-end gap-1">
+<span class="material-symbols-outlined text-status-safe text-[24px]">air</span>
+<span class="font-micro-label text-micro-label text-text-secondary uppercase">KATABATIC SHIFT</span>
+</div>
+</div>
+<div class="pt-panel-pad-dense bg-surface-container-lowest/50 px-panel-pad-dense mt-1">
+<span class="font-micro-label text-micro-label text-text-secondary tracking-tight">BUFFER: WIND &amp; VIS • ECMWF 0.1° RESOLUTION</span>
+</div>
+</div>
+</div>
+<!-- 2. LOWER SECTION: DUAL COLUMN SPLIT -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-lg">
+<!-- LEFT COLUMN (~48% - 5.5 of 12 cols, represented as col-span-5) -->
+<div class="xl:col-span-5 flex flex-col gap-gutter-lg">
+<!-- Risk Breakdown Panel -->
+<div class="bg-surface-panel backdrop-blur-md p-panel-pad-loose shadow-xl flex flex-col gap-gutter-md">
+<!-- Card Header -->
+<div class="flex items-center justify-between pb-panel-pad-dense bg-surface-container-low/60 -mx-panel-pad-loose -mt-panel-pad-loose p-panel-pad-loose mb-1">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">donut_large</span>
+<span class="font-headline-sm text-headline-sm text-text-primary tracking-tight uppercase">Risk Factor Breakdown &amp; Classification</span>
+</div>
+<span class="px-2 py-0.5 bg-surface-container-highest text-primary font-micro-label text-micro-label uppercase font-bold tracking-wider">
+              COMPOSITE WEIGHTED
+            </span>
+</div>
+<!-- Section 1: Stacked Horizontal Severity Bar -->
+<div class="flex flex-col gap-gutter-xs">
+<div class="flex items-center justify-between text-text-secondary font-telemetry-code text-telemetry-code">
+<span class="font-bold text-text-primary uppercase tracking-wide">Composite Risk Distribution by Source</span>
+<span>100% TOTAL LOAD</span>
+</div>
+<div class="w-full h-4 bg-surface-container-lowest flex overflow-hidden">
+<div class="h-full bg-status-danger" style="width: 45%;" title="Iceberg Intercept: 45%"></div>
+<div class="h-full bg-status-caution" style="width: 35%;" title="Consolidated Pack Ice: 35%"></div>
+<div class="h-full bg-status-telemetry" style="width: 20%;" title="Severe Weather &amp; Vis: 20%"></div>
+</div>
+<!-- Severity Legend Chips -->
+<div class="grid grid-cols-3 gap-gutter-xs mt-1">
+<div class="bg-surface-container-low p-1.5 flex flex-col">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-status-danger"></span>
+<span class="font-micro-label text-micro-label text-text-secondary uppercase">Iceberg Intercept</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">45%</span>
+<span class="font-micro-label text-micro-label text-text-muted">W: 0.45</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-1.5 flex flex-col">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-status-caution"></span>
+<span class="font-micro-label text-micro-label text-text-secondary uppercase">Pack Ice</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">35%</span>
+<span class="font-micro-label text-micro-label text-text-muted">W: 0.35</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-1.5 flex flex-col">
+<div class="flex items-center gap-1">
+<span class="w-2 h-2 bg-status-telemetry"></span>
+<span class="font-micro-label text-micro-label text-text-secondary uppercase">Weather &amp; Vis</span>
+</div>
+<div class="flex items-baseline justify-between mt-1">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">20%</span>
+<span class="font-micro-label text-micro-label text-text-muted">W: 0.20</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: SVG Donut Metric Overview -->
+<div class="bg-surface-container-lowest/70 p-panel-pad-compact flex flex-col sm:flex-row items-center justify-between gap-gutter-md my-1">
+<div class="relative w-36 h-36 flex items-center justify-center">
+<svg class="w-36 h-36 -rotate-90" viewbox="0 0 100 100">
+<!-- High Risk: 32% (stroke-dasharray="32 68" on circumference 314.16 => 100.5 / 213.6) -->
+<circle class="text-status-danger" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="100.5 213.6" stroke-dashoffset="0" stroke-width="12"></circle>
+<!-- Medium Risk: 41% => 128.8 / 185.3 -->
+<circle class="text-status-caution" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="128.8 185.3" stroke-dashoffset="-100.5" stroke-width="12"></circle>
+<!-- Low Risk: 27% => 84.8 / 229.3 -->
+<circle class="text-status-safe" cx="50" cy="50" fill="none" r="40" stroke="currentColor" stroke-dasharray="84.8 229.3" stroke-dashoffset="-229.3" stroke-width="12"></circle>
+</svg>
+<!-- Donut Center Label -->
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-stat-metric-mobile text-stat-metric-mobile text-text-primary font-bold tabular-nums">32%</span>
+<span class="font-micro-label text-micro-label text-status-danger font-bold uppercase tracking-widest">HIGH RISK</span>
+</div>
+</div>
+<!-- Donut Sector Breakdown Listing -->
+<div class="flex-1 flex flex-col gap-gutter-sm w-full">
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-high/40">
+<div class="flex items-center gap-gutter-xs">
+<span class="w-2.5 h-2.5 bg-status-danger"></span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">High Threat Exposure</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-telemetry-code text-telemetry-code text-status-danger font-bold">6 Sectors</span>
+<span class="font-micro-label text-micro-label text-text-muted">(32%)</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-high/40">
+<div class="flex items-center gap-gutter-xs">
+<span class="w-2.5 h-2.5 bg-status-caution"></span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">Moderate Exposure</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-telemetry-code text-telemetry-code text-status-caution font-bold">8 Sectors</span>
+<span class="font-micro-label text-micro-label text-text-muted">(41%)</span>
+</div>
+</div>
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-high/40">
+<div class="flex items-center gap-gutter-xs">
+<span class="w-2.5 h-2.5 bg-status-safe"></span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">Low / Open Ice</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-telemetry-code text-telemetry-code text-status-safe font-bold">5 Sectors</span>
+<span class="font-micro-label text-micro-label text-text-muted">(27%)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 3: Risk Hotspots Ranked List -->
+<div class="flex flex-col gap-gutter-xs">
+<div class="flex items-center justify-between pb-1">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold uppercase tracking-wider">Identified Critical Hotspots along Corridor</span>
+<span class="font-micro-label text-micro-label text-text-muted">SORTED BY DANGER COEFFICIENT</span>
+</div>
+<!-- Row 1 -->
+<div class="bg-surface-container-low p-panel-pad-compact flex flex-col gap-1 border-l-2 border-status-danger">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-text-primary">Sector C-4 Iceberg Corridor</span>
+<div class="flex items-center gap-1.5">
+<span class="font-micro-label text-micro-label text-status-danger uppercase font-bold">CRITICAL</span>
+<span class="px-1.5 py-0.2 bg-status-danger text-surface-container-lowest font-telemetry-code text-telemetry-code font-bold">72</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+                A17 drift path convergence, severe multi-year floe pinching between 66.4°S and 67.1°S.
+              </p>
+<div class="w-full h-1 bg-surface-container-highest mt-1 overflow-hidden">
+<div class="h-full bg-status-danger" style="width: 72%;"></div>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="bg-surface-container-low p-panel-pad-compact flex flex-col gap-1 border-l-2 border-status-caution">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-text-primary">Prydz Bay Pack Ice</span>
+<div class="flex items-center gap-1.5">
+<span class="font-micro-label text-micro-label text-status-caution uppercase font-bold">WARNING</span>
+<span class="px-1.5 py-0.2 bg-status-caution text-surface-container-lowest font-telemetry-code text-telemetry-code font-bold">58</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+                81% concentration, coastal shelf pressure ridges &gt;2.8m height, structural hull stress peak.
+              </p>
+<div class="w-full h-1 bg-surface-container-highest mt-1 overflow-hidden">
+<div class="h-full bg-status-caution" style="width: 58%;"></div>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="bg-surface-container-low p-panel-pad-compact flex flex-col gap-1 border-l-2 border-status-caution">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-text-primary">Katabatic Wind Zone (Cape Darnley)</span>
+<div class="flex items-center gap-1.5">
+<span class="font-micro-label text-micro-label text-status-caution uppercase font-bold">ADVISORY</span>
+<span class="px-1.5 py-0.2 bg-status-caution/80 text-surface-container-lowest font-telemetry-code text-telemetry-code font-bold">44</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+                Sustained 45+ kn gusts, zero visibility whiteout risk, dynamic floe compression active.
+              </p>
+<div class="w-full h-1 bg-surface-container-highest mt-1 overflow-hidden">
+<div class="h-full bg-status-caution" style="width: 44%;"></div>
+</div>
+</div>
+<!-- Row 4 -->
+<div class="bg-surface-container-low p-panel-pad-compact flex flex-col gap-1 border-l-2 border-status-safe">
+<div class="flex items-center justify-between">
+<span class="font-headline-sm text-headline-sm text-text-primary">Davis Sea Marginal Zone</span>
+<div class="flex items-center gap-1.5">
+<span class="font-micro-label text-micro-label text-status-safe uppercase font-bold">SAFE</span>
+<span class="px-1.5 py-0.2 bg-status-safe text-surface-container-lowest font-telemetry-code text-telemetry-code font-bold">19</span>
+</div>
+</div>
+<p class="font-body-sm text-body-sm text-text-secondary">
+                Fractured ice floes, continuous open water leads available with &gt;12 kn transit authorization.
+              </p>
+<div class="w-full h-1 bg-surface-container-highest mt-1 overflow-hidden">
+<div class="h-full bg-status-safe" style="width: 19%;"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN (~52% - 7 of 12 cols, col-span-7) -->
+<div class="xl:col-span-7 flex flex-col gap-gutter-lg">
+<!-- Upper Sub-Card: Risk Timeline (72h) -->
+<div class="bg-surface-panel backdrop-blur-md p-panel-pad-loose shadow-xl flex flex-col gap-gutter-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-panel-pad-dense bg-surface-container-low/60 -mx-panel-pad-loose -mt-panel-pad-loose p-panel-pad-loose mb-1 gap-2">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">timeline</span>
+<span class="font-headline-sm text-headline-sm text-text-primary tracking-tight uppercase">Composite Risk Score Timeline (0h → 72h)</span>
+</div>
+<div class="flex items-center gap-gutter-sm">
+<div class="flex items-center gap-1 font-micro-label text-micro-label text-status-danger">
+<span class="w-2.5 h-0.5 bg-status-danger"></span> Baseline Trajectory
+              </div>
+<div class="flex items-center gap-1 font-micro-label text-micro-label text-status-safe">
+<span class="w-2.5 h-0.5 border-t border-dashed border-status-safe"></span> Mitigated Projected
+              </div>
+</div>
+</div>
+<!-- SVG Visual Line Chart -->
+<div class="w-full bg-surface-container-lowest/90 p-panel-pad-compact relative flex flex-col">
+<div class="w-full h-64 relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 700 240">
+<defs>
+<lineargradient id="riskGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#F87171" stop-opacity="0.45"></stop>
+<stop offset="60%" stop-color="#F87171" stop-opacity="0.10"></stop>
+<stop offset="100%" stop-color="#F87171" stop-opacity="0"></stop>
+</lineargradient>
+<lineargradient id="criticalBand" x1="0" x2="1" y1="0" y2="0">
+<stop offset="0%" stop-color="#FACC15" stop-opacity="0.05"></stop>
+<stop offset="50%" stop-color="#FACC15" stop-opacity="0.15"></stop>
+<stop offset="100%" stop-color="#FACC15" stop-opacity="0.05"></stop>
+</lineargradient>
+</defs>
+<!-- Horizontal Dashed Gridlines -->
+<line stroke="#16263C" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="680" y1="30" y2="30"></line>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="32" y="34">75</text>
+<line stroke="#16263C" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="680" y1="90" y2="90"></line>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="32" y="94">50</text>
+<line stroke="#16263C" stroke-dasharray="4 4" stroke-width="1" x1="40" x2="680" y1="150" y2="150"></line>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="32" y="154">25</text>
+<line stroke="#1E3A5F" stroke-width="1" x1="40" x2="680" y1="210" y2="210"></line>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" text-anchor="end" x="32" y="214">0</text>
+<!-- Vertical Amber Threat Highlight Zone: 24h to 36h (x approx 253 to 360) -->
+<rect fill="url(#criticalBand)" height="190" width="107" x="253" y="20"></rect>
+<line stroke="#FACC15" stroke-dasharray="2 2" stroke-opacity="0.6" stroke-width="1" x1="253" x2="253" y1="20" y2="210"></line>
+<line stroke="#FACC15" stroke-dasharray="2 2" stroke-opacity="0.6" stroke-width="1" x1="360" x2="360" y1="20" y2="210"></line>
+<text fill="#FACC15" font-family="JetBrains Mono" font-size="8.5" font-weight="700" letter-spacing="0.05em" text-anchor="middle" x="306" y="28">CRITICAL WINDOW (T+24h to T+36h)</text>
+<!-- Primary Curve Shaded Gradient Area (Red) -->
+<!-- Points: (40, 160) [21h] -> (146, 140) [29h] -> (253, 75) [56h] -> (315, 27) [76h peak] -> (360, 60) [63h] -> (466, 125) [35h] -> (573, 165) [19h] -> (680, 175) [15h] -->
+<path d="M 40 160 Q 90 155, 146 140 T 253 75 Q 284 35, 315 27 Q 338 30, 360 60 T 466 125 T 573 165 T 680 175 L 680 210 L 40 210 Z" fill="url(#riskGradient)"></path>
+<!-- Primary Baseline Risk Line (Solid Red) -->
+<path d="M 40 160 Q 90 155, 146 140 T 253 75 Q 284 35, 315 27 Q 338 30, 360 60 T 466 125 T 573 165 T 680 175" fill="none" stroke="#F87171" stroke-width="2.5"></path>
+<!-- Secondary Mitigated Risk Line (Dashed Green) -->
+<!-- Curves smoothly down below 25 score (<150 px y) -->
+<path d="M 40 165 Q 90 160, 146 162 T 253 170 Q 284 175, 315 172 Q 338 170, 360 168 T 466 180 T 573 185 T 680 190" fill="none" stroke="#4ADE80" stroke-dasharray="5 3" stroke-width="2"></path>
+<!-- Peak Hotspot Marker at T+31h (x=315, y=27) -->
+<circle class="animate-ping" cx="315" cy="27" fill="#F87171" opacity="0.75" r="5"></circle>
+<circle cx="315" cy="27" fill="#F87171" r="3.5"></circle>
+<line stroke="#F87171" stroke-width="1" x1="315" x2="315" y1="27" y2="65"></line>
+<g transform="translate(325, 48)">
+<rect fill="#0B1524" height="22" stroke="#F87171" stroke-width="1" width="180" x="0" y="0"></rect>
+<text fill="#F87171" font-family="JetBrains Mono" font-size="9" font-weight="700" x="8" y="15">▲ A17 INTERSECT (T+31h) • PEAK: 76</text>
+</g>
+</svg>
+</div>
+<!-- X-Axis Labels -->
+<div class="grid grid-cols-7 text-center pt-2 font-telemetry-code text-telemetry-code text-text-secondary">
+<div class="flex flex-col">
+<span class="font-bold text-text-primary">0h</span>
+<span class="text-[9px] text-text-muted">02/06:00</span>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-text-primary">12h</span>
+<span class="text-[9px] text-text-muted">02/18:00</span>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-status-caution">24h</span>
+<span class="text-[9px] text-status-caution">03/06:00</span>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-status-danger">36h</span>
+<span class="text-[9px] text-status-danger">03/18:00</span>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-text-primary">48h</span>
+<span class="text-[9px] text-text-muted">04/06:00</span>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-text-primary">60h</span>
+<span class="text-[9px] text-text-muted">04/18:00</span>
+</div>
+<div class="flex flex-col">
+<span class="font-bold text-text-primary">72h</span>
+<span class="text-[9px] text-text-muted">05/06:00</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between text-text-muted font-micro-label text-micro-label px-1">
+<span>PREDICTIVE DRIFT DRIFT MODEL: POLAR-HYCOM v3.4 + SATELLITE ALTIMETRY</span>
+<span class="text-status-safe font-bold">PROJECTED RISK REDUCTION: -68.4% WITH MITIGATION APPLIED</span>
+</div>
+</div>
+<!-- Lower Sub-Card: Tactical Mitigation Recommendations -->
+<div class="bg-surface-panel backdrop-blur-md p-panel-pad-loose shadow-xl flex flex-col gap-gutter-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between pb-panel-pad-dense bg-surface-container-low/60 -mx-panel-pad-loose -mt-panel-pad-loose p-panel-pad-loose mb-1 gap-2">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-status-safe text-[20px]">shield</span>
+<span class="font-headline-sm text-headline-sm text-text-primary tracking-tight uppercase">AI Tactical Mitigation Recommendations</span>
+</div>
+<span class="px-2 py-0.5 bg-status-safe/10 text-status-safe font-micro-label text-micro-label uppercase font-bold tracking-wider">
+              AI ENGINE • CONFIDENCE 94%
+            </span>
+</div>
+<!-- 3 Tactical Directive Action Items -->
+<div class="flex flex-col gap-gutter-sm">
+<!-- Directive 1 -->
+<div class="bg-surface-container-low p-panel-pad-compact flex items-start gap-gutter-md hover:bg-surface-container-high transition-colors">
+<div class="w-8 h-8 bg-status-safe/10 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-safe text-[18px]">update</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Shift Departure +4h to Clear A17 Window</span>
+<span class="px-1.5 py-0.5 bg-status-safe/20 text-status-safe font-micro-label text-micro-label uppercase font-bold self-start sm:self-auto">
+                    -78% COLLISION PROB
+                  </span>
+</div>
+<p class="font-body-md text-body-md text-text-secondary mt-1 leading-relaxed">
+                  Delay waypoint DELTA-4 transit by 4 hours. Allows Iceberg A17 trajectory cone to drift 1.2 NM west of designated primary shipping lane, eliminating direct radar blindspot approach.
+                </p>
+<div class="flex items-center gap-gutter-md mt-2 font-telemetry-code text-telemetry-code text-text-muted">
+<span>IMPACT: +4.0h ARRIVAL</span>
+<span class="text-status-safe font-bold">• HULL HAZARD: NEGLIGIBLE</span>
+</div>
+</div>
+</div>
+<!-- Directive 2 -->
+<div class="bg-surface-container-low p-panel-pad-compact flex items-start gap-gutter-md hover:bg-surface-container-high transition-colors">
+<div class="w-8 h-8 bg-primary/10 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-primary text-[18px]">alt_route</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Adopt Green Lead Corridor East of 72°E</span>
+<span class="px-1.5 py-0.5 bg-primary/20 text-primary font-micro-label text-micro-label uppercase font-bold self-start sm:self-auto">
+                    DELTA: +18 NM
+                  </span>
+</div>
+<p class="font-body-md text-body-md text-text-secondary mt-1 leading-relaxed">
+                  Reroute entry via newly formed open lead at 68°E–72°E sector. Avoids multi-year compressed floes in Prydz Bay with negligible fuel penalty (&lt;1.8 MT MGO).
+                </p>
+<div class="flex items-center gap-gutter-md mt-2 font-telemetry-code text-telemetry-code text-text-muted">
+<span>PRESSURE RIDGES: BYPASS</span>
+<span class="text-primary font-bold">• OPEN WATER FRACTION: 68%</span>
+</div>
+</div>
+</div>
+<!-- Directive 3 -->
+<div class="bg-surface-container-low p-panel-pad-compact flex items-start gap-gutter-md hover:bg-surface-container-high transition-colors">
+<div class="w-8 h-8 bg-status-caution/10 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-status-caution text-[18px]">speed</span>
+</div>
+<div class="flex flex-col flex-1">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">Reduce Transit Speed to 7 kn in Sector C-4</span>
+<span class="px-1.5 py-0.5 bg-status-caution/20 text-status-caution font-micro-label text-micro-label uppercase font-bold self-start sm:self-auto">
+                    PC-5 COMPLIANT
+                  </span>
+</div>
+<p class="font-body-md text-body-md text-text-secondary mt-1 leading-relaxed">
+                  Throttle down from 12 kn to 7 kn between 65.8°S and 67.2°S to meet structural polar class impact threshold in sub-3km visibility conditions.
+                </p>
+<div class="flex items-center gap-gutter-md mt-2 font-telemetry-code text-telemetry-code text-text-muted">
+<span>DECELERATION SECTOR: 42 NM</span>
+<span class="text-status-caution font-bold">• IMPACT ENERGY: -65%</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Control Bar -->
+<div class="pt-panel-pad-dense bg-surface-raised -mx-panel-pad-loose -mb-panel-pad-loose p-panel-pad-loose flex flex-col md:flex-row md:items-center md:justify-between gap-gutter-md mt-2">
+<div class="flex items-center gap-2 font-telemetry-code text-telemetry-code text-text-muted">
+<span class="w-2 h-2 bg-status-safe"></span>
+<span>Last recomputed 8m ago • 50 ensemble perturbations tested</span>
+</div>
+<div class="flex flex-wrap items-center gap-gutter-sm">
+<button class="px-panel-pad-compact py-2 bg-surface-container-high hover:bg-surface-bright text-text-primary font-headline-sm text-headline-sm flex items-center gap-1.5 transition-colors" onclick="alert('Exporting Risk Dossier GeoJSON/PDF...')">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Assessment</span>
+</button>
+<button class="px-panel-pad-compact py-2 bg-surface-container-high hover:bg-surface-bright text-primary font-headline-sm text-headline-sm flex items-center gap-1.5 transition-colors" onclick="triggerSimulation()">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Re-run Analysis</span>
+</button>
+<button class="px-panel-pad-default py-2 bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold flex items-center gap-2 shadow-lg hover:brightness-110 active:scale-[0.99] transition-all" onclick="applyMitigation()">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Apply Mitigation Plan</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initOpsConsoleState() {
+    // Synchronize the App Shell sidebar active state to "Risk Analysis"
+    const navLinks = document.querySelectorAll('aside nav a');
+    navLinks.forEach(link => {
+      const path = link.getAttribute('data-path');
+      if (path === 'risk-analysis') {
+        link.className = 'flex items-center gap-gutter-sm px-panel-pad-compact py-2 bg-primary-container text-on-primary font-bold border-l-2 border-primary';
+        const icon = link.querySelector('.material-symbols-outlined');
+        if (icon) icon.className = 'material-symbols-outlined text-[18px] text-on-primary';
+      } else {
+        link.className = 'flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors';
+        const icon = link.querySelector('.material-symbols-outlined');
+        if (icon) icon.className = 'material-symbols-outlined text-[18px]';
+      }
+    });
+  })();
+
+  function triggerSimulation() {
+    const btn = event.currentTarget;
+    const icon = btn.querySelector('.material-symbols-outlined');
+    if (icon) icon.classList.add('animate-spin');
+    setTimeout(() => {
+      if (icon) icon.classList.remove('animate-spin');
+      alert('Monte Carlo risk ensemble recomputed successfully. 100/100 runs converged.');
+    }, 900);
+  }
+
+  function applyMitigation() {
+    const confirmed = confirm('Authorize tactical course adjustment: Waypoint shift +4h & Green Lead deviation via Sector 72°E?');
+    if (confirmed) {
+      alert('Mitigation Directives Transmitted to Bridge Ops Console (INS POLARIS). Telemetry locked.');
+    }
+  }
+</script></main></div></body></html>

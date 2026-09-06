@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-container-high":"#242a36","on-tertiary-container":"#454f60","status-telemetry":"#60A5FA","primary-fixed-dim":"#2fd9f4","surface-bright":"#333946","tertiary-container":"#b7c1d6","on-primary-container":"#005763","on-background":"#dde2f3","text-muted":"#64748B","surface-container-low":"#161c27","on-tertiary-fixed":"#121c2b","surface-container":"#1a202b","on-secondary-container":"#9fbae6","surface-container-highest":"#2f3541","tertiary":"#d3ddf2","surface-raised":"#0B1524","accent-cyan-dim":"rgba(34, 211, 238, 0.12)","text-primary":"#F1F5F9","surface-variant":"#2f3541","on-primary":"#00363e","on-error-container":"#ffdad6","text-secondary":"#94A3B8","border-active":"#1E3A5F","surface-container-lowest":"#080e19","outline-variant":"#3c494c","on-surface-variant":"#bbc9cd","surface-dim":"#0d131f","on-secondary-fixed-variant":"#2d486d","secondary-fixed":"#d5e3ff","error":"#ffb4ab","surface":"#0d131f","on-primary-fixed-variant":"#004e5a","error-container":"#93000a","on-primary-fixed":"#001f25","secondary":"#adc8f5","secondary-fixed-dim":"#adc8f5","surface-tint":"#2fd9f4","status-danger":"#F87171","on-secondary":"#133155","secondary-container":"#2f4a70","tertiary-fixed":"#d9e3f8","surface-panel":"rgba(16, 28, 46, 0.82)","accent-cyan-glow":"rgba(34, 211, 238, 0.35)","outline":"#859397","on-error":"#690005","primary-fixed":"#a2eeff","primary":"#8aebff","on-tertiary-fixed-variant":"#3e4758","background":"#0d131f","status-caution":"#FACC15","status-safe":"#4ADE80","border-subtle":"#16263C","inverse-on-surface":"#2a303d","inverse-surface":"#dde2f3","tertiary-fixed-dim":"#bdc7dc","on-tertiary":"#273141","on-surface":"#dde2f3","on-secondary-fixed":"#001c3b","primary-container":"#22d3ee","inverse-primary":"#006877"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-sm":"0.5rem","gutter-xs":"0.25rem","grid-margin":"1rem","panel-pad-compact":"0.75rem","panel-pad-dense":"0.5rem","gutter-lg":"1rem","panel-pad-loose":"1.25rem","gutter-md":"0.75rem","panel-pad-default":"1rem"},"fontFamily":{"display-hero":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"micro-label":["JetBrains Mono"],"telemetry-code":["JetBrains Mono"],"body-lg":["JetBrains Mono"],"body-sm":["JetBrains Mono"],"stat-metric-mobile":["JetBrains Mono"],"stat-metric":["JetBrains Mono"]},"fontSize":{"display-hero":["44px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-hero-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"30px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"600"}],"micro-label":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"600"}],"telemetry-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-lg":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"stat-metric-mobile":["24px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"stat-metric":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface select-none"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-raised border-b border-border-subtle"><div class="h-16 w-full px-grid-margin flex items-center justify-between gap-gutter-md"><div class="flex items-center gap-gutter-md min-w-[340px]"><img alt="POLARIS Polar Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UVElrj97vfNgzZpaxf_We33nkHUlU2G2ZLfnJHa6peu_SUmcSfd0IMfRehgOGrYxXoqbRyiXTrtoqy5TCsWAlnQAdc4fe5WadDpyw2C1xH4akH63RE4QHRcA-CZPatdXn30l3Gz81XHG8_PCov-hzCaJvPDz-BPbX_XXddSMJLGEDogOsg1sEdv05FMEqP0GJ35yvTarfDgT_7hf5ShPbZp3mTH1KmOR5fwWhp9Lfljve67hlDWam6hCjf"/><div class="flex flex-col"><div class="flex items-center gap-gutter-sm"><span class="font-headline-md text-headline-md font-bold tracking-tight text-text-primary uppercase">POLARIS</span><span class="px-1.5 py-0.5 bg-surface-container-high border border-border-subtle text-primary font-micro-label text-micro-label uppercase">NCPOR</span></div><span class="font-micro-label text-micro-label text-text-muted uppercase">AI-Enabled Antarctic Navigation &amp; Decision Support System</span></div></div><div class="hidden xl:flex items-center gap-gutter-sm"><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-primary text-[16px]">ac_unit</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">TEMP:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">-18°C</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-status-telemetry text-[16px]">air</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">WIND:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">25 km/h</span><span class="font-micro-label text-micro-label text-text-muted">SSE</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-secondary text-[16px]">visibility</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">VIS:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">5 km</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-primary text-[16px]">radar</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">SAR ICE:</span><span class="font-telemetry-code text-telemetry-code text-primary font-bold">SYNCED</span></div></div><div class="flex items-center gap-gutter-md"><div class="flex flex-col items-end"><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold tracking-wider">02 SEP 2026 06:30 UTC</span><div class="flex items-center gap-1.5"><span class="inline-block w-2 h-2 bg-status-safe animate-pulse"></span><span class="font-micro-label text-micro-label text-status-safe tracking-widest uppercase">SYSTEM ONLINE</span></div></div><div class="h-7 w-[1px] bg-border-subtle"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low border-r border-border-subtle z-40 flex flex-col justify-between"><div class="py-panel-pad-compact flex flex-col"><div class="px-panel-pad-compact pb-2 mb-2 border-b border-border-subtle flex items-center justify-between"><span class="font-micro-label text-micro-label text-text-muted tracking-widest uppercase">NAVIGATION STACK</span><span class="font-telemetry-code text-telemetry-code text-primary">GRID v4.2</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-bold border-l-2 border-primary"><a aria-current="page" class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 transition-colors bg-primary-container text-on-primary font-bold border-l-2 border-primary" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span>Dashboard</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mission-planner" href="#"><span class="material-symbols-outlined text-[18px]">explore</span>Mission Planner</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sea-ice-forecast" href="#"><span class="material-symbols-outlined text-[18px]">layers</span>Sea Ice Forecast</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="iceberg-tracker" href="#"><span class="material-symbols-outlined text-[18px]">radar</span>Iceberg Tracker</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="route-optimizer" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span>Route Optimizer</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="risk-analysis" href="#"><span class="material-symbols-outlined text-[18px]">warning</span>Risk Analysis</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weather-and-ocean" href="#"><span class="material-symbols-outlined text-[18px]">air</span>Weather &amp; Ocean</a><a class="flex items-center justify-between px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="alerts" href="#"><div class="flex items-center gap-gutter-sm"><span class="material-symbols-outlined text-[18px]">notifications_active</span>Alerts</div><span class="px-1.5 py-0.5 bg-error-container text-on-error-container font-micro-label text-micro-label font-bold">3</span></a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span>Reports</a></nav></div><div class="p-panel-pad-compact border-t border-border-subtle bg-surface-raised flex flex-col gap-gutter-xs"><div class="flex items-center justify-between text-text-muted font-micro-label text-micro-label uppercase"><span>SAT LINK LATENCY</span><span class="text-status-safe font-telemetry-code text-telemetry-code">42 ms</span></div><div class="w-full h-1 bg-border-subtle overflow-hidden"><div class="h-full bg-primary w-4/5"></div></div><div class="flex items-center justify-between pt-1"><span class="font-micro-label text-micro-label text-text-secondary uppercase">POLAR ORBITER-7</span><span class="inline-block w-1.5 h-1.5 bg-primary"></span></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<script>
+    (() => {
+      const activeNav = document.querySelector('aside nav a[data-path="mission-planner"]');
+      if (activeNav) {
+        const classes = "bg-primary-container text-on-primary font-bold border-l-2 border-primary".split(" ");
+        classes.forEach(c => activeNav.classList.add(c));
+        activeNav.classList.remove("text-on-surface-variant");
+      }
+      const dashboardNav = document.querySelector('aside nav a[data-path="dashboard"]');
+      if (dashboardNav) {
+        dashboardNav.classList.remove("bg-primary-container", "text-on-primary", "font-bold", "border-l-2", "border-primary");
+        dashboardNav.classList.add("text-on-surface-variant");
+      }
+    })();
+  </script>
+<div class="p-panel-pad-compact flex flex-col gap-gutter-md">
+<!-- CONSOLE SUB-HEADER BAR -->
+<section class="w-full bg-surface-raised/95 backdrop-blur-md px-panel-pad-default py-panel-pad-compact flex flex-wrap items-center justify-between gap-gutter-md">
+<div class="flex items-center gap-gutter-md">
+<div class="flex items-center gap-gutter-xs">
+<span class="w-2.5 h-2.5 bg-primary animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-text-primary tracking-wide uppercase">MISSION ORCHESTRATOR &amp; AI ROUTE SYNTHESIZER</span>
+</div>
+<span class="px-2 py-0.5 bg-surface-container text-text-secondary font-telemetry-code text-telemetry-code">GRID REF: AN-72E</span>
+<span class="px-2 py-0.5 bg-primary/10 text-primary font-micro-label text-micro-label font-bold uppercase tracking-wider">ENSEMBLE SEED #MC-128</span>
+</div>
+<div class="flex items-center gap-gutter-md">
+<div class="flex items-center gap-gutter-xs">
+<span class="font-micro-label text-micro-label text-text-muted uppercase">ACTIVE PROFILE:</span>
+<span class="font-telemetry-code text-telemetry-code text-status-safe font-bold uppercase">NCPOR-AUTONOMOUS-ICE-V4</span>
+</div>
+<div class="h-4 w-[1px] bg-border-subtle"></div>
+<div class="flex items-center gap-gutter-xs">
+<span class="font-micro-label text-micro-label text-text-muted uppercase">POLAR CORRIDOR:</span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary">BHARATI → MAITRI</span>
+</div>
+</div>
+</section>
+<!-- 3-COLUMN TACTICAL WORKSPACE -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-md items-start">
+<!-- COLUMN 1: MISSION CONFIGURATION PANEL (xl:col-span-3) -->
+<section class="xl:col-span-3 flex flex-col gap-gutter-md">
+<!-- Mission Primary Spec Card -->
+<div class="bg-surface-panel backdrop-blur-xl border border-border-active flex flex-col shadow-2xl">
+<!-- Card Header Bar -->
+<div class="bg-surface-raised px-panel-pad-default py-2 border-b border-border-active flex items-center justify-between">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">explore</span>
+<span class="font-headline-sm text-headline-sm text-text-primary tracking-tight uppercase">Mission Details</span>
+</div>
+<span class="px-1.5 py-0.5 bg-surface-container-high text-primary font-micro-label text-micro-label uppercase tracking-wider">[OP-ID: EXP-2026-09]</span>
+</div>
+<!-- Card Body -->
+<div class="p-panel-pad-default flex flex-col gap-gutter-md">
+<!-- Vessel Select -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<label class="font-micro-label text-micro-label text-text-secondary uppercase">Assigned Vessel</label>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">[IMO: 9812402]</span>
+</div>
+<div class="relative bg-surface-container-lowest border border-border-active flex items-center justify-between px-panel-pad-compact py-2 focus-within:border-primary">
+<div class="flex items-center gap-gutter-xs min-w-0">
+<span class="material-symbols-outlined text-primary text-[16px] shrink-0">directions_boat</span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary truncate">RV Polar Explorer</span>
+</div>
+<span class="font-micro-label text-micro-label px-1 bg-surface-container-high text-status-safe uppercase shrink-0">PC-5</span>
+</div>
+</div>
+<!-- Route Endpoints -->
+<div class="grid grid-cols-1 gap-gutter-sm">
+<div class="flex flex-col gap-1">
+<label class="font-micro-label text-micro-label text-text-secondary uppercase">Departure Station</label>
+<div class="bg-surface-container-lowest border border-border-active px-panel-pad-compact py-2 flex items-center justify-between">
+<div class="flex items-center gap-gutter-xs truncate">
+<span class="w-1.5 h-1.5 bg-status-safe shrink-0"></span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary truncate">Bharati (Larsemann Hills)</span>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted">69°24'S</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-micro-label text-micro-label text-text-secondary uppercase">Destination Station</label>
+<div class="bg-surface-container-lowest border border-border-active px-panel-pad-compact py-2 flex items-center justify-between">
+<div class="flex items-center gap-gutter-xs truncate">
+<span class="w-1.5 h-1.5 bg-primary shrink-0"></span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary truncate">Maitri (Schirmacher Oasis)</span>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted">70°45'S</span>
+</div>
+</div>
+</div>
+<!-- Schedule Dates -->
+<div class="grid grid-cols-2 gap-gutter-sm">
+<div class="flex flex-col gap-1">
+<label class="font-micro-label text-micro-label text-text-secondary uppercase">Departure</label>
+<div class="bg-surface-container-lowest border border-border-active px-2 py-1.5 flex items-center justify-between">
+<span class="font-telemetry-code text-telemetry-code text-text-primary">04 SEP 2026</span>
+<span class="material-symbols-outlined text-[14px] text-primary">calendar_today</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-micro-label text-micro-label text-text-secondary uppercase">Target Arrival</label>
+<div class="bg-surface-container-lowest border border-border-active px-2 py-1.5 flex items-center justify-between">
+<span class="font-telemetry-code text-telemetry-code text-text-primary">11 SEP 2026</span>
+<span class="material-symbols-outlined text-[14px] text-text-muted">event_available</span>
+</div>
+</div>
+</div>
+<div class="px-2 py-1 bg-surface-container-lowest/70 border-l-2 border-primary flex items-center justify-between">
+<span class="font-micro-label text-micro-label text-text-muted uppercase">ESTIMATED TRANSIT RUNTIME</span>
+<span class="font-telemetry-code text-telemetry-code text-primary font-bold">164.5 HOURS (~6.9 D)</span>
+</div>
+<!-- Optimization Priority Pills -->
+<div class="flex flex-col gap-1.5">
+<label class="font-micro-label text-micro-label text-text-secondary uppercase">Algorithmic Objective</label>
+<div class="grid grid-cols-3 gap-1" id="priority-selector">
+<button class="px-1.5 py-2 bg-status-safe/15 border border-status-safe text-status-safe font-micro-label text-micro-label flex flex-col items-center gap-1 uppercase transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">security</span>
+<span>Safety</span>
+</button>
+<button class="px-1.5 py-2 bg-surface-container-low border border-border-active text-text-secondary hover:text-text-primary font-micro-label text-micro-label flex flex-col items-center gap-1 uppercase transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">balance</span>
+<span>Balanced</span>
+</button>
+<button class="px-1.5 py-2 bg-surface-container-low border border-border-active text-text-secondary hover:text-status-caution font-micro-label text-micro-label flex flex-col items-center gap-1 uppercase transition-colors" type="button">
+<span class="material-symbols-outlined text-[15px]">eco</span>
+<span>Fuel Opt</span>
+</button>
+</div>
+</div>
+<!-- Risk Tolerance Dynamic Slider -->
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="font-micro-label text-micro-label text-text-secondary uppercase">Risk Tolerance Engine</span>
+<span class="font-telemetry-code text-telemetry-code text-status-safe font-bold" id="risk-val">30% (Defensive Mode)</span>
+</div>
+<div class="relative w-full h-4 flex items-center">
+<div class="w-full h-1.5 bg-surface-container-lowest border border-border-subtle relative">
+<div class="h-full bg-primary" style="width: 30%"></div>
+</div>
+<div class="absolute left-[30%] -ml-1.5 w-3 h-4 bg-primary border border-text-primary shadow-[0_0_10px_rgba(34,211,238,0.7)] cursor-pointer"></div>
+</div>
+<div class="flex justify-between font-micro-label text-micro-label text-text-muted uppercase">
+<span>0% Safe Leads</span>
+<span>50% Tactical</span>
+<span>100% Aggressive</span>
+</div>
+</div>
+<!-- Tactical Constraint Checkboxes -->
+<div class="flex flex-col gap-2 pt-1 border-t border-border-subtle">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">Mission Rules &amp; Constraints</span>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="accent-primary h-3.5 w-3.5 bg-surface-container-lowest border-border-active rounded-none" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-secondary group-hover:text-text-primary">Avoid iceberg high-drift corridors</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="accent-primary h-3.5 w-3.5 bg-surface-container-lowest border-border-active rounded-none" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-secondary group-hover:text-text-primary">Minimize multi-year sea-ice exposure</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input checked="" class="accent-primary h-3.5 w-3.5 bg-surface-container-lowest border-border-active rounded-none" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-secondary group-hover:text-text-primary">Optimize for synoptic weather windows</span>
+</label>
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="accent-primary h-3.5 w-3.5 bg-surface-container-lowest border-border-active rounded-none" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-text-secondary group-hover:text-text-primary">Allow nighttime ice-transit maneuvers</span>
+</label>
+</div>
+<!-- AI Generate Action Button -->
+<button class="w-full mt-2 py-3 px-panel-pad-default bg-gradient-to-r from-[#0EA5E9] to-[#22D3EE] text-surface-container-lowest font-headline-sm text-headline-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 shadow-[0_0_16px_rgba(34,211,238,0.4)] active:scale-[0.99] transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">bolt</span>
+<span>Generate AI Route Candidates</span>
+</button>
+</div>
+</div>
+<!-- Vessel Micro Teaser Card -->
+<div class="bg-surface-raised border border-border-subtle p-panel-pad-compact flex items-center justify-between">
+<div class="flex items-center gap-gutter-sm">
+<div class="w-10 h-10 bg-surface-container-lowest border border-border-active flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[22px]">sailing</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-primary">RV Polar Explorer</span>
+<span class="font-telemetry-code text-telemetry-code text-text-secondary">Icebreaker • Polar Class 5</span>
+</div>
+</div>
+<span class="px-2 py-0.5 bg-status-safe/10 border border-status-safe/30 text-status-safe font-micro-label text-micro-label uppercase font-bold">READY</span>
+</div>
+</section>
+<!-- COLUMN 2: CENTER TACTICAL ANTARCTICA MAP VIEWPORT (xl:col-span-6) -->
+<section class="xl:col-span-6 flex flex-col gap-gutter-sm">
+<div class="relative w-full bg-surface-container-lowest border border-border-active overflow-hidden flex flex-col shadow-2xl min-h-[640px]">
+<!-- Tactical Top HUD inside Map -->
+<div class="absolute top-0 left-0 right-0 z-20 bg-gradient-to-b from-surface-raised/95 via-surface-raised/60 to-transparent p-panel-pad-compact flex items-start justify-between pointer-events-none">
+<div class="flex flex-col gap-1 pointer-events-auto">
+<div class="flex items-center gap-gutter-xs bg-surface-raised/90 border border-border-active px-2 py-1">
+<span class="material-symbols-outlined text-primary text-[14px]">satellite_alt</span>
+<span class="font-micro-label text-micro-label text-text-primary uppercase tracking-wider">SENTINEL-1A SAR RADAR OVERLAY</span>
+<span class="text-status-safe font-telemetry-code text-telemetry-code font-bold">0.8m RES</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-text-secondary bg-surface-container-lowest/80 px-1 border border-border-subtle self-start">
+                BOUNDS: 68°00'S - 72°30'S | 09°00'E - 79°00'E
+              </span>
+</div>
+<!-- Route Synthesis In-Progress Toast -->
+<div class="pointer-events-auto bg-surface-raised/95 border border-primary/50 shadow-[0_0_15px_rgba(34,211,238,0.25)] p-2.5 flex flex-col gap-1.5 w-72">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 bg-primary animate-ping"></span>
+<span class="font-micro-label text-micro-label text-text-primary uppercase font-bold">Route Generation Active</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-primary font-bold">68%</span>
+</div>
+<div class="w-full h-1 bg-surface-container-high overflow-hidden">
+<div class="h-full bg-primary w-[68%] transition-all duration-500 shadow-[0_0_8px_#22D3EE]"></div>
+</div>
+<div class="flex justify-between items-center text-text-muted font-micro-label text-micro-label uppercase">
+<span>Ensemble Run #412</span>
+<span>128 Monte Carlo Seeds</span>
+</div>
+</div>
+</div>
+<!-- MAP GRAPHIC CANVAS (VECTOR SVG STYLED ANTARCTIC SHELF & ROUTES) -->
+<div class="relative w-full h-[540px] bg-[#060B14] flex items-center justify-center overflow-hidden select-none">
+<!-- Bathymetry & Polar Coordinate Grid -->
+<svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="60" id="polarGrid" patternunits="userSpaceOnUse" width="60">
+<path d="M 60 0 L 0 0 0 60" fill="none" opacity="0.6" stroke="#16263C" stroke-width="0.75"></path>
+<circle cx="60" cy="0" fill="#38BDF8" opacity="0.3" r="1"></circle>
+</pattern>
+<radialgradient cx="50%" cy="40%" id="oceanGlow" r="60%">
+<stop offset="0%" stop-color="#0E1D33"></stop>
+<stop offset="100%" stop-color="#060B14"></stop>
+</radialgradient>
+<filter height="140%" id="cyanNeon" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="0" flood-color="#22D3EE" flood-opacity="0.8" stddeviation="3"></fedropshadow>
+</filter>
+<filter height="140%" id="safeGlow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="0" flood-color="#4ADE80" flood-opacity="0.7" stddeviation="4"></fedropshadow>
+</filter>
+<filter height="140%" id="warnGlow" width="140%" x="-20%" y="-20%">
+<fedropshadow dx="0" dy="0" flood-color="#F59E0B" flood-opacity="0.8" stddeviation="3"></fedropshadow>
+</filter>
+</defs>
+<!-- Deep Ocean Background -->
+<rect fill="url(#oceanGlow)" height="100%" width="100%"></rect>
+<rect fill="url(#polarGrid)" height="100%" width="100%"></rect>
+<!-- Stylized Ice Shelf Mass / Antarctic Coastline -->
+<path d="M -20,540 L -20,380 Q 80,390 140,410 T 320,380 T 480,440 T 640,410 T 800,430 T 960,370 L 960,540 Z" fill="#132338" opacity="0.85"></path>
+<path d="M -20,540 L -20,420 Q 90,430 180,440 T 360,420 T 540,460 T 720,440 T 960,400 L 960,540 Z" fill="#1A2F4B" opacity="0.95"></path>
+<!-- Fast Ice & Multi-Year Pack Shards -->
+<polygon fill="#243C5E" points="120,320 180,310 190,340 130,350" stroke="#1E3A5F" stroke-width="1"></polygon>
+<polygon fill="#243C5E" points="260,280 340,290 320,320 250,305" stroke="#1E3A5F" stroke-width="1"></polygon>
+<polygon fill="#243C5E" points="420,260 500,250 490,280 430,285" stroke="#1E3A5F" stroke-width="1"></polygon>
+<polygon fill="#243C5E" points="560,310 630,300 620,330 550,335" stroke="#1E3A5F" stroke-width="1"></polygon>
+<!-- Lat/Lon Ticks Text -->
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" letter-spacing="1" x="30" y="520">71°00'S</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" letter-spacing="1" x="30" y="360">70°00'S</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" letter-spacing="1" x="30" y="200">69°00'S</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" x="180" y="520">15°00'E</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" x="440" y="520">45°00'E</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" x="700" y="520">76°00'E</text>
+<!-- Bathymetric 1000m / 2000m Depth Contours -->
+<path d="M 0,220 C 220,180 480,260 900,160" fill="none" opacity="0.5" stroke="#1E3A5F" stroke-dasharray="3,3" stroke-width="1"></path>
+<path d="M 0,140 C 260,110 520,190 900,90" fill="none" opacity="0.3" stroke="#1E3A5F" stroke-dasharray="3,3" stroke-width="1"></path>
+<!-- GENERATIVE ROUTE 1: SHORTEST (HIGH RISK - RED) -->
+<path d="M 720,220 C 600,200 380,210 160,290" fill="none" opacity="0.85" stroke="#F87171" stroke-dasharray="6,4" stroke-width="2"></path>
+<!-- GENERATIVE ROUTE 2: FUEL OPTIMAL (AMBER) -->
+<path d="M 720,220 C 620,150 360,160 160,290" fill="none" filter="url(#warnGlow)" opacity="0.9" stroke="#FACC15" stroke-dasharray="7,5" stroke-width="2.5"></path>
+<!-- GENERATIVE ROUTE 3: SAFEST (RECOMMENDED - GREEN / CYAN) -->
+<path d="M 720,220 C 580,100 320,120 160,290" fill="none" filter="url(#safeGlow)" stroke="#4ADE80" stroke-dasharray="8,4" stroke-width="3"></path>
+<!-- Current Vessel Vector Origin Ring -->
+<circle cx="720" cy="220" fill="none" opacity="0.4" r="18" stroke="#22D3EE" stroke-dasharray="4,2" stroke-width="1"></circle>
+<circle cx="720" cy="220" fill="#22D3EE" fill-opacity="0.3" r="8" stroke="#22D3EE" stroke-width="1.5"></circle>
+<circle cx="720" cy="220" fill="#FFFFFF" r="3"></circle>
+<!-- Heading Vector Line -->
+<line stroke="#22D3EE" stroke-width="2" x1="720" x2="680" y1="220" y2="185"></line>
+<!-- DESTINATION BEACON (Maitri Station) -->
+<circle cx="160" cy="290" fill="none" opacity="0.6" r="12" stroke="#22D3EE" stroke-width="1"></circle>
+<circle cx="160" cy="290" fill="#22D3EE" r="4"></circle>
+</svg>
+<!-- DOM OVERLAY PINS & HAZARD BADGES -->
+<!-- Station Pin: Bharati -->
+<div class="absolute right-12 top-48 flex items-center gap-1.5 bg-surface-raised/90 border border-primary/60 px-2 py-1 shadow-[0_0_10px_rgba(34,211,238,0.2)]">
+<span class="w-2 h-2 bg-status-safe"></span>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-primary font-bold uppercase">DEPARTURE: BHARATI</span>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">69°24'28"S, 76°11'14"E</span>
+</div>
+</div>
+<!-- Station Pin: Maitri -->
+<div class="absolute left-8 top-64 flex items-center gap-1.5 bg-surface-raised/90 border border-primary/60 px-2 py-1 shadow-[0_0_10px_rgba(34,211,238,0.2)]">
+<span class="w-2 h-2 bg-primary"></span>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-primary font-bold uppercase">DESTINATION: MAITRI</span>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">70°45'58"S, 11°43'56"E</span>
+</div>
+</div>
+<!-- Hazard Warning 1: Iceberg A-17 -->
+<div class="absolute left-[44%] top-[40%] flex items-center gap-1 bg-error-container/80 border border-status-danger px-1.5 py-0.5 shadow-lg cursor-pointer">
+<span class="material-symbols-outlined text-status-danger text-[14px]">warning</span>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-text-primary font-bold">ICEBERG A17</span>
+<span class="font-telemetry-code text-telemetry-code text-status-danger">72% COLLISION RISK</span>
+</div>
+</div>
+<!-- Hazard Warning 2: Iceberg B-09 -->
+<div class="absolute left-[62%] top-[32%] flex items-center gap-1 bg-surface-raised/80 border border-border-active px-1.5 py-0.5">
+<span class="material-symbols-outlined text-status-caution text-[14px]">priority_high</span>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-text-primary">ICEBERG B09</span>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">18% DRIFT RISK</span>
+</div>
+</div>
+<!-- Hazard Warning 3: Iceberg C-23 -->
+<div class="absolute left-[32%] top-[24%] flex items-center gap-1 bg-surface-raised/80 border border-border-active px-1.5 py-0.5">
+<span class="material-symbols-outlined text-status-caution text-[14px]">report_problem</span>
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-text-primary">ICEBERG C23</span>
+<span class="font-telemetry-code text-telemetry-code text-status-caution">31% COMPACTED</span>
+</div>
+</div>
+<!-- Trajectory Legend Float Card -->
+<div class="absolute left-3 bottom-3 bg-surface-raised/90 border border-border-subtle p-2 flex flex-col gap-1.5 shadow-xl">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">Candidate Trajectories</span>
+<div class="flex items-center gap-2">
+<div class="w-4 h-0.5 bg-status-safe"></div>
+<span class="font-telemetry-code text-telemetry-code text-text-primary">Route A • Safest (Recommended) — 1,320 nm</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-0.5 bg-status-caution"></div>
+<span class="font-telemetry-code text-telemetry-code text-text-primary">Route B • Fuel Optimal — 1,180 nm (-11% Fuel)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-0.5 bg-status-danger"></div>
+<span class="font-telemetry-code text-telemetry-code text-text-primary">Route C • Direct/Shortest — 1,090 nm [HAZARDOUS]</span>
+</div>
+</div>
+</div>
+<!-- MAP BOTTOM CONTROLS & TIMELINE TRAY -->
+<div class="bg-surface-raised p-panel-pad-compact border-t border-border-active flex flex-col gap-gutter-xs">
+<div class="flex flex-wrap items-center justify-between gap-gutter-sm">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">history_toggle_off</span>
+<span class="font-micro-label text-micro-label text-text-primary uppercase tracking-wider">Transit Time Window Simulation</span>
+<span class="px-1.5 py-0.5 bg-surface-container text-primary font-telemetry-code text-telemetry-code font-bold">T+48.0h</span>
+</div>
+<div class="flex items-center gap-gutter-sm">
+<span class="font-micro-label text-micro-label text-text-muted">STEP: 6H</span>
+<button class="p-1 bg-surface-container hover:bg-surface-container-high text-primary" type="button"><span class="material-symbols-outlined text-[16px]">play_arrow</span></button>
+<button class="p-1 bg-surface-container hover:bg-surface-container-high text-text-secondary" type="button"><span class="material-symbols-outlined text-[16px]">pause</span></button>
+</div>
+</div>
+<!-- Simulation Range Track -->
+<div class="flex items-center gap-3">
+<span class="font-telemetry-code text-telemetry-code text-text-muted">T+0h</span>
+<div class="relative w-full h-3 flex items-center">
+<div class="w-full h-1 bg-surface-container-lowest border border-border-subtle">
+<div class="h-full bg-gradient-to-r from-primary to-status-safe" style="width: 28.5%"></div>
+</div>
+<div class="absolute left-[28.5%] -ml-1 w-2.5 h-3 bg-text-primary border border-primary shadow-[0_0_8px_#22D3EE]"></div>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">T+168h</span>
+</div>
+<!-- Map Layer Switchers -->
+<div class="flex flex-wrap items-center gap-1.5 pt-1">
+<span class="font-micro-label text-micro-label text-text-muted uppercase mr-1">LAYERS:</span>
+<button class="px-2 py-0.5 bg-primary/20 border border-primary text-primary font-micro-label text-micro-label uppercase" type="button">Ice Concentration</button>
+<button class="px-2 py-0.5 bg-primary/20 border border-primary text-primary font-micro-label text-micro-label uppercase" type="button">Drift Vectors</button>
+<button class="px-2 py-0.5 bg-surface-container border border-border-subtle text-text-secondary hover:text-text-primary font-micro-label text-micro-label uppercase" type="button">Wave Heights</button>
+<button class="px-2 py-0.5 bg-surface-container border border-border-subtle text-text-secondary hover:text-text-primary font-micro-label text-micro-label uppercase" type="button">SAR Mesh</button>
+<button class="px-2 py-0.5 bg-surface-container border border-border-subtle text-text-secondary hover:text-text-primary font-micro-label text-micro-label uppercase" type="button">Bathymetry 500m</button>
+</div>
+</div>
+</div>
+</section>
+<!-- COLUMN 3: MISSION PARAMETERS & OPERATING CONSTRAINTS (xl:col-span-3) -->
+<section class="xl:col-span-3 flex flex-col gap-gutter-md">
+<!-- CARD 1: Operating Constraints -->
+<div class="bg-surface-panel backdrop-blur-xl border border-border-active flex flex-col shadow-2xl">
+<div class="bg-surface-raised px-panel-pad-default py-2 border-b border-border-active flex items-center justify-between">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">tune</span>
+<span class="font-headline-sm text-headline-sm text-text-primary tracking-tight uppercase">Operating Constraints</span>
+</div>
+<span class="w-2 h-2 bg-status-safe"></span>
+</div>
+<div class="p-panel-pad-default flex flex-col gap-gutter-sm">
+<!-- Max Iceberg Proximity -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-micro-label text-micro-label text-text-secondary uppercase">Min Iceberg Standoff</span>
+<span class="font-telemetry-code text-telemetry-code text-primary font-bold">25.0 NM</span>
+</div>
+<div class="w-full h-1 bg-surface-container-lowest border border-border-subtle">
+<div class="h-full bg-primary" style="width: 62.5%"></div>
+</div>
+</div>
+<!-- Ice Concentration Limit -->
+<div class="flex justify-between items-center py-1 border-b border-border-subtle">
+<span class="font-body-sm text-body-sm text-text-secondary">Min Ice Concentration Max</span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">40% Lead Cover</span>
+</div>
+<!-- Wave Height Max -->
+<div class="flex justify-between items-center py-1 border-b border-border-subtle">
+<span class="font-body-sm text-body-sm text-text-secondary">Max Permissible Sig Wave</span>
+<span class="font-telemetry-code text-telemetry-code text-status-caution font-bold">4.0 m Swell</span>
+</div>
+<!-- Sub-surface Draft Margin -->
+<div class="flex justify-between items-center py-1">
+<span class="font-body-sm text-body-sm text-text-secondary">Sub-surface Draft Margin</span>
+<span class="font-telemetry-code text-telemetry-code text-status-safe font-bold">3.5 m Clearance</span>
+</div>
+</div>
+</div>
+<!-- CARD 2: Vessel Operational Status -->
+<div class="bg-surface-panel backdrop-blur-xl border border-border-active flex flex-col shadow-2xl">
+<div class="bg-surface-raised px-panel-pad-default py-2 border-b border-border-active flex items-center justify-between">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">perm_data_setting</span>
+<span class="font-headline-sm text-headline-sm text-text-primary tracking-tight uppercase">Vessel Status</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-status-safe">100% NOMINAL</span>
+</div>
+<div class="p-panel-pad-default flex flex-col gap-gutter-sm">
+<!-- Fuel Telemetry -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-center">
+<span class="font-micro-label text-micro-label text-text-secondary uppercase">MGO Fuel Reserves</span>
+<span class="font-telemetry-code text-telemetry-code text-status-safe font-bold">62% (485,000 L)</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-lowest border border-border-subtle">
+<div class="h-full bg-status-safe" style="width: 62%"></div>
+</div>
+</div>
+<!-- Hull Class & Speed Rating -->
+<div class="grid grid-cols-2 gap-gutter-xs pt-1">
+<div class="bg-surface-container-lowest p-2 border border-border-subtle flex flex-col">
+<span class="font-micro-label text-micro-label text-text-muted uppercase">Hull Class</span>
+<span class="font-telemetry-code text-telemetry-code text-primary font-bold">PC-5 Polar</span>
+<span class="font-micro-label text-micro-label text-text-secondary">1.2m Level Ice</span>
+</div>
+<div class="bg-surface-container-lowest p-2 border border-border-subtle flex flex-col">
+<span class="font-micro-label text-micro-label text-text-muted uppercase">Cruising Speed</span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">8.5 kn</span>
+<span class="font-micro-label text-micro-label text-text-secondary">Open: 14.0 kn</span>
+</div>
+</div>
+<!-- Propulsion Unit -->
+<div class="bg-surface-container-lowest p-2 border border-border-subtle flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-micro-label text-micro-label text-text-muted uppercase">Propulsion</span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary">Twin Azipod Diesel-Electric</span>
+</div>
+<span class="material-symbols-outlined text-status-safe text-[20px]">check_circle</span>
+</div>
+</div>
+</div>
+<!-- CARD 3: Weather Window Matrix (7-Day Forecast Strip) -->
+<div class="bg-surface-panel backdrop-blur-xl border border-border-active flex flex-col shadow-2xl">
+<div class="bg-surface-raised px-panel-pad-default py-2 border-b border-border-active flex items-center justify-between">
+<div class="flex items-center gap-gutter-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_view_week</span>
+<span class="font-headline-sm text-headline-sm text-text-primary tracking-tight uppercase">Weather Window Matrix</span>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted uppercase">7-DAY ECMWF</span>
+</div>
+<div class="p-panel-pad-default flex flex-col gap-1.5">
+<!-- Day 1 -->
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-lowest border-l-2 border-status-safe">
+<div class="flex items-center gap-2">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">D1 04 SEP</span>
+<span class="font-micro-label text-micro-label text-text-secondary">Winds 15 kn SSE</span>
+</div>
+<span class="px-1.5 py-0.2 bg-status-safe/15 text-status-safe font-micro-label text-micro-label uppercase font-bold">FAIR</span>
+</div>
+<!-- Day 2 -->
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-lowest border-l-2 border-status-safe">
+<div class="flex items-center gap-2">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">D2 05 SEP</span>
+<span class="font-micro-label text-micro-label text-text-secondary">Optimal lead opening</span>
+</div>
+<span class="px-1.5 py-0.2 bg-status-safe/15 text-status-safe font-micro-label text-micro-label uppercase font-bold">OPTIMAL</span>
+</div>
+<!-- Day 3 -->
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-lowest border-l-2 border-status-caution">
+<div class="flex items-center gap-2">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">D3 06 SEP</span>
+<span class="font-micro-label text-micro-label text-status-caution">Katabatic surge 35 kn</span>
+</div>
+<span class="px-1.5 py-0.2 bg-status-caution/15 text-status-caution font-micro-label text-micro-label uppercase font-bold">CAUTION</span>
+</div>
+<!-- Day 4 -->
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-lowest border-l-2 border-status-danger">
+<div class="flex items-center gap-2">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">D4 07 SEP</span>
+<span class="font-micro-label text-micro-label text-status-danger">Gale 48 kn / high drift</span>
+</div>
+<span class="px-1.5 py-0.2 bg-status-danger/15 text-status-danger font-micro-label text-micro-label uppercase font-bold">BLIZZARD</span>
+</div>
+<!-- Day 5 -->
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-lowest border-l-2 border-status-caution">
+<div class="flex items-center gap-2">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">D5 08 SEP</span>
+<span class="font-micro-label text-micro-label text-text-secondary">Residual swell 3.8m</span>
+</div>
+<span class="px-1.5 py-0.2 bg-status-caution/15 text-status-caution font-micro-label text-micro-label uppercase font-bold">MODERATE</span>
+</div>
+<!-- Day 6 -->
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-lowest border-l-2 border-status-safe">
+<div class="flex items-center gap-2">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">D6 09 SEP</span>
+<span class="font-micro-label text-micro-label text-text-secondary">Calm high pressure ridge</span>
+</div>
+<span class="px-1.5 py-0.2 bg-status-safe/15 text-status-safe font-micro-label text-micro-label uppercase font-bold">CLEAR</span>
+</div>
+<!-- Day 7 -->
+<div class="flex items-center justify-between px-2 py-1 bg-surface-container-lowest border-l-2 border-status-safe">
+<div class="flex items-center gap-2">
+<span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">D7 10 SEP</span>
+<span class="font-micro-label text-micro-label text-text-secondary">Arrival window open</span>
+</div>
+<span class="px-1.5 py-0.2 bg-status-safe/15 text-status-safe font-micro-label text-micro-label uppercase font-bold">OPTIMAL</span>
+</div>
+</div>
+</div>
+<!-- STICKY BOTTOM ACTIONS -->
+<div class="bg-surface-raised border border-border-active p-panel-pad-compact flex flex-col gap-2">
+<button class="w-full py-2.5 px-panel-pad-default border border-primary text-primary hover:bg-primary/10 font-headline-sm text-headline-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span>Save Draft Mission</span>
+</button>
+<button class="w-full py-3 px-panel-pad-default bg-gradient-to-r from-[#0EA5E9] to-[#38BDF8] text-surface-container-lowest font-headline-sm text-headline-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_16px_rgba(56,189,248,0.4)] hover:brightness-110 active:scale-[0.99] transition-all" type="button">
+<span>Launch Mission Simulation</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</section>
+</div>
+<!-- LOWER TELEMETRY DOCK: EXPEDITION LOGISTICS & SAR FEED LOGS -->
+<section class="bg-surface-panel backdrop-blur-md border border-border-active p-panel-pad-compact flex flex-col gap-gutter-xs">
+<div class="flex items-center justify-between border-b border-border-subtle pb-1">
+<div class="flex items-center gap-gutter-sm">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-widest">REAL-TIME INFERENCE LOGS</span>
+<span class="px-1.5 py-0.2 bg-surface-container-high text-primary font-telemetry-code text-telemetry-code">POLARIS-AI-CORE v2.4</span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-text-secondary">SATELLITE SYNC: 14s AGO</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter-sm font-telemetry-code text-telemetry-code text-text-secondary pt-1">
+<div class="flex items-center gap-2">
+<span class="text-status-safe">[06:29:42 UTC]</span>
+<span class="text-text-primary">Sentinel-1A SAR swath loaded.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-status-safe">[06:29:55 UTC]</span>
+<span class="text-text-primary">Iceberg A17 drift vector: +0.4 kn NW.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-status-caution">[06:30:02 UTC]</span>
+<span class="text-status-caution">Route C crosses 80% multi-year pack.</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="text-primary">[06:30:14 UTC]</span>
+<span class="text-primary">Optimal corridor Bharati → Maitri converged.</span>
+</div>
+</div>
+</section>
+</div>
+</div></main></div></body></html>

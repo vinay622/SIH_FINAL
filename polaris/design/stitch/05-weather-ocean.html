@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"surface-container-high":"#242a36","on-tertiary-container":"#454f60","status-telemetry":"#60A5FA","primary-fixed-dim":"#2fd9f4","surface-bright":"#333946","tertiary-container":"#b7c1d6","on-primary-container":"#005763","on-background":"#dde2f3","text-muted":"#64748B","surface-container-low":"#161c27","on-tertiary-fixed":"#121c2b","surface-container":"#1a202b","on-secondary-container":"#9fbae6","surface-container-highest":"#2f3541","tertiary":"#d3ddf2","surface-raised":"#0B1524","accent-cyan-dim":"rgba(34, 211, 238, 0.12)","text-primary":"#F1F5F9","surface-variant":"#2f3541","on-primary":"#00363e","on-error-container":"#ffdad6","text-secondary":"#94A3B8","border-active":"#1E3A5F","surface-container-lowest":"#080e19","outline-variant":"#3c494c","on-surface-variant":"#bbc9cd","surface-dim":"#0d131f","on-secondary-fixed-variant":"#2d486d","secondary-fixed":"#d5e3ff","error":"#ffb4ab","surface":"#0d131f","on-primary-fixed-variant":"#004e5a","error-container":"#93000a","on-primary-fixed":"#001f25","secondary":"#adc8f5","secondary-fixed-dim":"#adc8f5","surface-tint":"#2fd9f4","status-danger":"#F87171","on-secondary":"#133155","secondary-container":"#2f4a70","tertiary-fixed":"#d9e3f8","surface-panel":"rgba(16, 28, 46, 0.82)","accent-cyan-glow":"rgba(34, 211, 238, 0.35)","outline":"#859397","on-error":"#690005","primary-fixed":"#a2eeff","primary":"#8aebff","on-tertiary-fixed-variant":"#3e4758","background":"#0d131f","status-caution":"#FACC15","status-safe":"#4ADE80","border-subtle":"#16263C","inverse-on-surface":"#2a303d","inverse-surface":"#dde2f3","tertiary-fixed-dim":"#bdc7dc","on-tertiary":"#273141","on-surface":"#dde2f3","on-secondary-fixed":"#001c3b","primary-container":"#22d3ee","inverse-primary":"#006877"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"gutter-sm":"0.5rem","gutter-xs":"0.25rem","grid-margin":"1rem","panel-pad-compact":"0.75rem","panel-pad-dense":"0.5rem","gutter-lg":"1rem","panel-pad-loose":"1.25rem","gutter-md":"0.75rem","panel-pad-default":"1rem"},"fontFamily":{"display-hero":["Space Grotesk"],"display-hero-mobile":["Space Grotesk"],"headline-md":["Space Grotesk"],"body-md":["JetBrains Mono"],"headline-lg":["Space Grotesk"],"headline-sm":["Space Grotesk"],"micro-label":["JetBrains Mono"],"telemetry-code":["JetBrains Mono"],"body-lg":["JetBrains Mono"],"body-sm":["JetBrains Mono"],"stat-metric-mobile":["JetBrains Mono"],"stat-metric":["JetBrains Mono"]},"fontSize":{"display-hero":["44px",{"lineHeight":"48px","letterSpacing":"-0.03em","fontWeight":"700"}],"display-hero-mobile":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["13px",{"lineHeight":"18px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["24px",{"lineHeight":"30px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"600"}],"micro-label":["10px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"600"}],"telemetry-code":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"500"}],"body-lg":["14px",{"lineHeight":"22px","letterSpacing":"0em","fontWeight":"400"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"400"}],"stat-metric-mobile":["24px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"700"}],"stat-metric":["32px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface-container-lowest font-body-md text-on-surface select-none"><header class="fixed top-0 left-0 right-0 h-16 z-50 bg-surface-raised border-b border-border-subtle"><div class="h-16 w-full px-grid-margin flex items-center justify-between gap-gutter-md"><div class="flex items-center gap-gutter-md min-w-[340px]"><img alt="POLARIS Polar Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1UVElrj97vfNgzZpaxf_We33nkHUlU2G2ZLfnJHa6peu_SUmcSfd0IMfRehgOGrYxXoqbRyiXTrtoqy5TCsWAlnQAdc4fe5WadDpyw2C1xH4akH63RE4QHRcA-CZPatdXn30l3Gz81XHG8_PCov-hzCaJvPDz-BPbX_XXddSMJLGEDogOsg1sEdv05FMEqP0GJ35yvTarfDgT_7hf5ShPbZp3mTH1KmOR5fwWhp9Lfljve67hlDWam6hCjf"/><div class="flex flex-col"><div class="flex items-center gap-gutter-sm"><span class="font-headline-md text-headline-md font-bold tracking-tight text-text-primary uppercase">POLARIS</span><span class="px-1.5 py-0.5 bg-surface-container-high border border-border-subtle text-primary font-micro-label text-micro-label uppercase">NCPOR</span></div><span class="font-micro-label text-micro-label text-text-muted uppercase">AI-Enabled Antarctic Navigation &amp; Decision Support System</span></div></div><div class="hidden xl:flex items-center gap-gutter-sm"><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-primary text-[16px]">ac_unit</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">TEMP:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">-18°C</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-status-telemetry text-[16px]">air</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">WIND:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">25 km/h</span><span class="font-micro-label text-micro-label text-text-muted">SSE</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-secondary text-[16px]">visibility</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">VIS:</span><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold">5 km</span></div><div class="flex items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-lowest border border-border-subtle"><span class="material-symbols-outlined text-primary text-[16px]">radar</span><span class="font-telemetry-code text-telemetry-code text-text-secondary">SAR ICE:</span><span class="font-telemetry-code text-telemetry-code text-primary font-bold">SYNCED</span></div></div><div class="flex items-center gap-gutter-md"><div class="flex flex-col items-end"><span class="font-telemetry-code text-telemetry-code text-text-primary font-bold tracking-wider">02 SEP 2026 06:30 UTC</span><div class="flex items-center gap-1.5"><span class="inline-block w-2 h-2 bg-status-safe animate-pulse"></span><span class="font-micro-label text-micro-label text-status-safe tracking-widest uppercase">SYSTEM ONLINE</span></div></div><div class="h-7 w-[1px] bg-border-subtle"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><aside class="fixed left-0 top-16 bottom-0 w-64 bg-surface-container-low border-r border-border-subtle z-40 flex flex-col justify-between"><div class="py-panel-pad-compact flex flex-col"><div class="px-panel-pad-compact pb-2 mb-2 border-b border-border-subtle flex items-center justify-between"><span class="font-micro-label text-micro-label text-text-muted tracking-widest uppercase">NAVIGATION STACK</span><span class="font-telemetry-code text-telemetry-code text-primary">GRID v4.2</span></div><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary font-bold border-l-2 border-primary"><a aria-current="page" class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 transition-colors bg-primary-container text-on-primary font-bold border-l-2 border-primary" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[18px]">grid_view</span>Dashboard</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="mission-planner" href="#"><span class="material-symbols-outlined text-[18px]">explore</span>Mission Planner</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="sea-ice-forecast" href="#"><span class="material-symbols-outlined text-[18px]">layers</span>Sea Ice Forecast</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="iceberg-tracker" href="#"><span class="material-symbols-outlined text-[18px]">radar</span>Iceberg Tracker</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="route-optimizer" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span>Route Optimizer</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="risk-analysis" href="#"><span class="material-symbols-outlined text-[18px]">warning</span>Risk Analysis</a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="weather-and-ocean" href="#"><span class="material-symbols-outlined text-[18px]">air</span>Weather &amp; Ocean</a><a class="flex items-center justify-between px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="alerts" href="#"><div class="flex items-center gap-gutter-sm"><span class="material-symbols-outlined text-[18px]">notifications_active</span>Alerts</div><span class="px-1.5 py-0.5 bg-error-container text-on-error-container font-micro-label text-micro-label font-bold">3</span></a><a class="flex items-center gap-gutter-sm px-panel-pad-compact py-2 text-on-surface-variant font-headline-sm text-headline-sm hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[18px]">description</span>Reports</a></nav></div><div class="p-panel-pad-compact border-t border-border-subtle bg-surface-raised flex flex-col gap-gutter-xs"><div class="flex items-center justify-between text-text-muted font-micro-label text-micro-label uppercase"><span>SAT LINK LATENCY</span><span class="text-status-safe font-telemetry-code text-telemetry-code">42 ms</span></div><div class="w-full h-1 bg-border-subtle overflow-hidden"><div class="h-full bg-primary w-4/5"></div></div><div class="flex items-center justify-between pt-1"><span class="font-micro-label text-micro-label text-text-secondary uppercase">POLAR ORBITER-7</span><span class="inline-block w-1.5 h-1.5 bg-primary"></span></div></div></aside><div class="pl-64"><main class="w-full pt-16 bg-surface-container-lowest min-h-screen"><div class="flex flex-col w-full">
+<!-- Interactive Script for Tab Active States, Layer Toggles, and Timeline Controls -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Highlight Weather & Ocean in the shell sidebar
+      const navLinks = document.querySelectorAll('aside nav a');
+      navLinks.forEach(link => {
+        if (link.getAttribute('data-path') === 'weather-and-ocean') {
+          link.className = 'flex items-center gap-gutter-sm px-panel-pad-compact py-2 bg-primary-container text-on-primary font-bold border-l-2 border-primary transition-colors shadow-sm';
+          const icon = link.querySelector('.material-symbols-outlined');
+          if (icon) icon.className = 'material-symbols-outlined text-[18px] text-on-primary';
+        } else {
+          link.classList.remove('bg-primary-container', 'text-on-primary', 'font-bold', 'border-l-2', 'border-primary');
+        }
+      });
+
+      // Layer Toggle Micro-interactions
+      const toggles = document.querySelectorAll('.layer-btn');
+      toggles.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const isActive = btn.getAttribute('data-active') === 'true';
+          const newState = !isActive;
+          btn.setAttribute('data-active', newState);
+          const checkIcon = btn.querySelector('.check-indicator');
+          if (newState) {
+            btn.classList.add('bg-primary-container/20', 'text-primary');
+            btn.classList.remove('bg-surface-container-high/60', 'text-text-muted');
+            if (checkIcon) checkIcon.textContent = 'check_box';
+          } else {
+            btn.classList.remove('bg-primary-container/20', 'text-primary');
+            btn.classList.add('bg-surface-container-high/60', 'text-text-muted');
+            if (checkIcon) checkIcon.textContent = 'check_box_outline_blank';
+          }
+        });
+      });
+
+      // Timeline Scrubber simulation
+      const slider = document.getElementById('temporal-slider');
+      const timeDisplay = document.getElementById('temporal-forecast-label');
+      const playBtn = document.getElementById('play-btn');
+      let isPlaying = false;
+      let playInterval = null;
+
+      const scrubLabels = {
+        0: 'FORECAST: T+0.0h (02 SEP 06:30 UTC) - INITIALIZED SYNOPTIC RUN',
+        6: 'FORECAST: T+6.0h (02 SEP 12:30 UTC) - EARLY DRAINAGE SWELLING',
+        12: 'FORECAST: T+12.0h (02 SEP 18:30 UTC) - APPROACHING SHEAR MARGIN',
+        18: 'FORECAST: T+18.0h (03 SEP 00:30 UTC) - PEAK GALE FRONTAL IMPACT',
+        24: 'FORECAST: T+24.0h (03 SEP 06:30 UTC) - MAXIMUM KATABATIC SWELL 4.8m',
+        36: 'FORECAST: T+36.0h (03 SEP 18:30 UTC) - SLOW BAROMETRIC REBOUND',
+        48: 'FORECAST: T+48.0h (04 SEP 06:30 UTC) - MODERATING SWELL REGIME',
+        72: 'FORECAST: T+72.0h (05 SEP 06:30 UTC) - NOMINAL POLAR BASIN FLOW'
+      };
+
+      if (slider && timeDisplay) {
+        slider.addEventListener('input', (e) => {
+          const val = e.target.value;
+          const closestStep = [0, 6, 12, 18, 24, 36, 48, 72].reduce((prev, curr) => Math.abs(curr - val) < Math.abs(prev - val) ? curr : prev);
+          timeDisplay.textContent = scrubLabels[closestStep] || `FORECAST: T+${val}.0h - PROJECTION ACTIVE`;
+        });
+      }
+
+      if (playBtn && slider) {
+        playBtn.addEventListener('click', () => {
+          isPlaying = !isPlaying;
+          const playIcon = playBtn.querySelector('.material-symbols-outlined');
+          if (isPlaying) {
+            playIcon.textContent = 'pause';
+            playInterval = setInterval(() => {
+              let currentVal = parseInt(slider.value, 10);
+              let nextVal = currentVal + 6;
+              if (nextVal > 72) nextVal = 0;
+              slider.value = nextVal;
+              slider.dispatchEvent(new Event('input'));
+            }, 1200);
+          } else {
+            playIcon.textContent = 'play_arrow';
+            clearInterval(playInterval);
+          }
+        });
+      }
+    });
+  </script>
+<!-- SUBHEADER / SYNOPTIC COMMAND STRIP -->
+<div class="px-grid-margin py-gutter-md bg-surface-raised flex flex-wrap items-center justify-between gap-gutter-md shadow-sm">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-gutter-sm">
+<span class="font-headline-md text-headline-md text-text-primary tracking-tight">TACTICAL METEOROLOGY &amp; OCEAN DYNAMICS</span>
+<span class="px-1.5 py-0.5 bg-accent-cyan-dim text-primary font-micro-label text-micro-label tracking-widest uppercase">MODEL: ECMWF-HRES + POLAR-WRF v5.4</span>
+</div>
+<div class="flex items-center gap-gutter-sm text-text-secondary font-telemetry-code text-telemetry-code">
+<span class="text-primary font-bold">SECTOR:</span> PRYDZ BAY → MAITRI • SOUTHERN OCEAN EXPEDITION CORRIDOR [ANTARCTICA EAST]
+        <span class="text-text-muted">•</span>
+<span class="inline-flex items-center gap-1 text-status-safe">
+<span class="w-1.5 h-1.5 bg-status-safe"></span> 99.1% ASSIMILATION SYNC
+        </span>
+</div>
+</div>
+<div class="flex items-center gap-gutter-sm">
+<button class="px-panel-pad-compact py-1.5 bg-surface-container hover:bg-surface-container-high text-primary font-telemetry-code text-telemetry-code font-bold tracking-wider uppercase flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[15px]">file_download</span>
+        Export METOC Package (.GRB2)
+      </button>
+<button class="px-panel-pad-compact py-1.5 bg-surface-container hover:bg-surface-container-high text-on-surface font-telemetry-code text-telemetry-code uppercase flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[15px] text-primary">sync</span>
+        Refresh Radar Satellite
+      </button>
+<div class="px-panel-pad-compact py-1.5 bg-error-container/20 text-status-danger font-telemetry-code text-telemetry-code font-bold uppercase flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[15px] animate-pulse">volume_up</span>
+        Alert Sounder [Active]
+      </div>
+</div>
+</div>
+<!-- MAIN VIEWPORT CONTAINER -->
+<div class="p-grid-margin flex flex-col gap-gutter-lg">
+<!-- 1. TOP ROW — CURRENT ENVIRONMENTAL CONDITIONS STRIP (6 HIGH-DENSITY METRICS) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-gutter-md">
+<!-- Metric 1: Wind Speed & Direction -->
+<div class="bg-surface-panel p-panel-pad-default flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high/40 transition-colors">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-transparent"></div>
+<div class="flex items-center justify-between pb-1">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">WIND VELOCITY</span>
+<span class="material-symbols-outlined text-primary text-[18px]">air</span>
+</div>
+<div class="my-1 flex items-baseline gap-1.5">
+<span class="font-stat-metric text-stat-metric text-text-primary">25</span>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">km/h</span>
+<span class="text-primary font-bold ml-auto font-headline-sm text-headline-sm flex items-center">
+            ↗ <span class="text-xs ml-0.5 text-text-secondary">SSE</span>
+</span>
+</div>
+<div class="pt-1.5 bg-surface-container-lowest/50 px-2 py-1 flex items-center justify-between font-telemetry-code text-telemetry-code">
+<span class="text-text-muted">GUSTS: <span class="text-text-primary font-bold">41 km/h</span></span>
+<span class="text-status-caution font-bold">+4 km/h vs 3h</span>
+</div>
+</div>
+<!-- Metric 2: Air Temp & Wind Chill -->
+<div class="bg-surface-panel p-panel-pad-default flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high/40 transition-colors">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-status-telemetry to-transparent"></div>
+<div class="flex items-center justify-between pb-1">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">AIR TEMPERATURE</span>
+<span class="material-symbols-outlined text-status-telemetry text-[18px]">device_thermostat</span>
+</div>
+<div class="my-1 flex items-baseline gap-1.5">
+<span class="font-stat-metric text-stat-metric text-text-primary">−18</span>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">°C</span>
+<span class="text-status-telemetry font-bold ml-auto font-headline-sm text-headline-sm flex items-center">
+            ↓ <span class="text-xs ml-0.5 text-text-secondary">CHILL</span>
+</span>
+</div>
+<div class="pt-1.5 bg-surface-container-lowest/50 px-2 py-1 flex items-center justify-between font-telemetry-code text-telemetry-code">
+<span class="text-text-muted">WIND CHILL: <span class="text-status-telemetry font-bold">−34°C</span></span>
+<span class="text-status-telemetry font-bold">−1.5°C</span>
+</div>
+</div>
+<!-- Metric 3: Sea Surface Temp (SST) -->
+<div class="bg-surface-panel p-panel-pad-default flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high/40 transition-colors">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-secondary to-transparent"></div>
+<div class="flex items-center justify-between pb-1">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">SEA TEMP (SST)</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">water</span>
+</div>
+<div class="my-1 flex items-baseline gap-1.5">
+<span class="font-stat-metric text-stat-metric text-text-primary">−1.8</span>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">°C</span>
+<span class="text-secondary font-bold ml-auto font-headline-sm text-headline-sm">
+            → <span class="text-xs ml-0.5 text-text-secondary">FRZ</span>
+</span>
+</div>
+<div class="pt-1.5 bg-surface-container-lowest/50 px-2 py-1 flex items-center justify-between font-telemetry-code text-telemetry-code">
+<span class="text-text-muted">FREEZE PT: <span class="text-text-primary font-bold">−1.9°C</span></span>
+<span class="text-status-safe font-bold">PACK ACTIVE</span>
+</div>
+</div>
+<!-- Metric 4: Barometric Pressure -->
+<div class="bg-surface-panel p-panel-pad-default flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high/40 transition-colors">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-status-danger to-transparent"></div>
+<div class="flex items-center justify-between pb-1">
+<span class="font-micro-label text-micro-label text-status-danger uppercase tracking-wider font-bold">BARO PRESSURE</span>
+<span class="material-symbols-outlined text-status-danger text-[18px]">speed</span>
+</div>
+<div class="my-1 flex items-baseline gap-1.5">
+<span class="font-stat-metric text-stat-metric text-status-danger">982</span>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">hPa</span>
+<span class="text-status-danger font-bold ml-auto font-headline-sm text-headline-sm">
+            ↓↓ <span class="text-xs ml-0.5">DROP</span>
+</span>
+</div>
+<div class="pt-1.5 bg-surface-container-lowest/50 px-2 py-1 flex items-center justify-between font-telemetry-code text-telemetry-code">
+<span class="text-text-muted">RATE: <span class="text-status-danger font-bold">-3.2 hPa/3h</span></span>
+<span class="text-status-danger font-bold">KATABATIC LOW</span>
+</div>
+</div>
+<!-- Metric 5: Significant Swell -->
+<div class="bg-surface-panel p-panel-pad-default flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high/40 transition-colors">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-status-caution to-transparent"></div>
+<div class="flex items-center justify-between pb-1">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">SIGNIFICANT SWELL</span>
+<span class="material-symbols-outlined text-status-caution text-[18px]">tsunami</span>
+</div>
+<div class="my-1 flex items-baseline gap-1.5">
+<span class="font-stat-metric text-stat-metric text-text-primary">3.2</span>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">m</span>
+<span class="text-status-caution font-bold ml-auto font-headline-sm text-headline-sm flex items-center">
+            ↗ <span class="text-xs ml-0.5 text-text-secondary">SW</span>
+</span>
+</div>
+<div class="pt-1.5 bg-surface-container-lowest/50 px-2 py-1 flex items-center justify-between font-telemetry-code text-telemetry-code">
+<span class="text-text-muted">PERIOD: <span class="text-text-primary font-bold">11.4s</span></span>
+<span class="text-status-caution font-bold">CAUTION RANGE</span>
+</div>
+</div>
+<!-- Metric 6: Visibility & Ceiling -->
+<div class="bg-surface-panel p-panel-pad-default flex flex-col justify-between shadow-sm relative overflow-hidden group hover:bg-surface-container-high/40 transition-colors">
+<div class="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-secondary to-transparent"></div>
+<div class="flex items-center justify-between pb-1">
+<span class="font-micro-label text-micro-label text-text-muted uppercase tracking-wider">VISIBILITY</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">foggy</span>
+</div>
+<div class="my-1 flex items-baseline gap-1.5">
+<span class="font-stat-metric text-stat-metric text-text-primary">5.0</span>
+<span class="font-telemetry-code text-telemetry-code text-text-muted">km</span>
+<span class="text-text-secondary font-bold ml-auto font-headline-sm text-headline-sm">
+            → <span class="text-xs ml-0.5 text-text-secondary">STBL</span>
+</span>
+</div>
+<div class="pt-1.5 bg-surface-container-lowest/50 px-2 py-1 flex items-center justify-between font-telemetry-code text-telemetry-code">
+<span class="text-text-muted">CEILING: <span class="text-text-primary font-bold">650 m</span></span>
+<span class="text-status-safe font-bold">SNOW: LOW</span>
+</div>
+</div>
+</div>
+<!-- 2. MAIN WORKSPACE: MAP (62%) + FORECAST & ADVISORIES (38%) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter-lg items-start">
+<!-- LEFT COLUMN: TACTICAL METOC MAP & STREAMLINES (~62% = 7.5 col equivalent -> xl:col-span-7 or 8) -->
+<div class="xl:col-span-7 2xl:col-span-8 flex flex-col gap-gutter-sm bg-surface-panel p-panel-pad-default shadow-md">
+<!-- Map Header & Telemetry Grid Info -->
+<div class="flex flex-wrap items-center justify-between gap-gutter-sm pb-2 bg-surface-raised/80 px-panel-pad-compact py-1.5">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-text-primary flex items-center gap-1.5">
+<span class="inline-block w-2 h-2 bg-primary"></span>
+              POLAR METOC SYNTHESIS • HIGH-RESOLUTION WIND STREAMLINES &amp; SST GRADIENTS
+            </span>
+<span class="font-telemetry-code text-telemetry-code text-text-secondary">
+              COORDINATES: 62°00'S - 74°00'S | 15°00'E - 85°00'E • PROJECTION: EPSG:3031 ANTARCTIC STEREOGRAPHIC
+            </span>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-7 h-7 bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" title="Center Vessel">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+</button>
+<button class="w-7 h-7 bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" title="Zoom In">
+<span class="material-symbols-outlined text-[16px]">add</span>
+</button>
+<button class="w-7 h-7 bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" title="Zoom Out">
+<span class="material-symbols-outlined text-[16px]">remove</span>
+</button>
+<button class="w-7 h-7 bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" title="Fullscreen Map">
+<span class="material-symbols-outlined text-[16px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Layer Toggles HUD Strip -->
+<div class="flex flex-wrap items-center gap-gutter-xs px-panel-pad-compact py-1 bg-surface-container-low text-telemetry-code font-telemetry-code">
+<span class="text-text-muted uppercase text-micro-label font-micro-label mr-1">ACTIVE LAYERS:</span>
+<button class="layer-btn px-2 py-0.5 bg-primary-container/20 text-primary flex items-center gap-1 transition-all" data-active="true">
+<span class="material-symbols-outlined text-[14px] check-indicator">check_box</span>
+            Wind Streamlines (Cyan)
+          </button>
+<button class="layer-btn px-2 py-0.5 bg-surface-container-high/60 text-text-muted hover:text-text-primary flex items-center gap-1 transition-all" data-active="false">
+<span class="material-symbols-outlined text-[14px] check-indicator">check_box_outline_blank</span>
+            Isobars (980–1004 hPa)
+          </button>
+<button class="layer-btn px-2 py-0.5 bg-primary-container/20 text-primary flex items-center gap-1 transition-all" data-active="true">
+<span class="material-symbols-outlined text-[14px] check-indicator">check_box</span>
+            SST Thermal Gradient
+          </button>
+<button class="layer-btn px-2 py-0.5 bg-surface-container-high/60 text-text-muted hover:text-text-primary flex items-center gap-1 transition-all" data-active="false">
+<span class="material-symbols-outlined text-[14px] check-indicator">check_box_outline_blank</span>
+            Swell Vectors
+          </button>
+<button class="layer-btn px-2 py-0.5 bg-primary-container/20 text-primary flex items-center gap-1 transition-all" data-active="true">
+<span class="material-symbols-outlined text-[14px] check-indicator">check_box</span>
+            Katabatic Shear Zone
+          </button>
+</div>
+<!-- Tactical Antarctica Ocean & Streamlines Map Viewport -->
+<div class="relative w-full h-[540px] bg-surface-container-lowest overflow-hidden flex items-center justify-center select-none shadow-inner">
+<!-- Background Thermal SST Contours Layer (SVG Map) -->
+<svg class="absolute inset-0 w-full h-full" fill="none" viewbox="0 0 960 540" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<!-- Thermal SST Gradient Filter -->
+<radialgradient cx="50%" cy="110%" id="sst-polar-gradient" r="90%">
+<stop offset="0%" stop-color="#080e19" stop-opacity="1"></stop>
+<stop offset="35%" stop-color="#0e2338" stop-opacity="0.95"></stop>
+<stop offset="65%" stop-color="#12344d" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#1a4768" stop-opacity="0.6"></stop>
+</radialgradient>
+<!-- Katabatic Shear Hazard Shading -->
+<lineargradient id="shear-hazard-grad" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#F87171" stop-opacity="0.25"></stop>
+<stop offset="100%" stop-color="#F87171" stop-opacity="0.03"></stop>
+</lineargradient>
+<pattern height="60" id="radar-grid" patternunits="userSpaceOnUse" width="60">
+<path d="M 60 0 L 0 0 0 60" fill="none" stroke="#16263C" stroke-dasharray="2 2" stroke-width="0.75"></path>
+</pattern>
+</defs>
+<!-- Coordinate Grid Fill -->
+<rect fill="url(#sst-polar-gradient)" height="540" width="960"></rect>
+<rect fill="url(#radar-grid)" height="540" opacity="0.6" width="960"></rect>
+<!-- Ocean Depth & SST Contours (-1.8°C to +0.5°C) -->
+<path d="M 0 320 C 140 310, 260 290, 420 305 C 580 320, 720 340, 960 315 L 960 540 L 0 540 Z" fill="#0B1524" opacity="0.8"></path>
+<path d="M 0 390 C 180 375, 340 385, 530 365 C 690 350, 810 395, 960 380 L 960 540 L 0 540 Z" fill="#101C2E" opacity="0.9"></path>
+<!-- Ice Shelf & Continental Slope Geometry (East Antarctica / Prydz Bay Region) -->
+<path d="M 0 450 Q 150 420, 310 440 T 560 415 T 780 445 L 960 430 L 960 540 L 0 540 Z" fill="#1b2838"></path>
+<!-- Fast Ice / Continental Ice Cap edge -->
+<path d="M 0 485 Q 220 475, 410 495 T 720 480 T 960 490 L 960 540 L 0 540 Z" fill="#243447"></path>
+<!-- Katabatic Outflow Shear Hazard Highlight Zone -->
+<polygon fill="url(#shear-hazard-grad)" points="460,260 670,290 640,430 420,400" stroke="#F87171" stroke-dasharray="4 3" stroke-width="1.5"></polygon>
+<text fill="#F87171" font-family="JetBrains Mono" font-size="11" font-weight="600" letter-spacing="0.08em" x="475" y="325">! DANGER: KATABATIC SHEAR ZONE (85 km/h)</text>
+<text fill="#ffdad6" font-family="JetBrains Mono" font-size="9" x="475" y="342">HIGH SUPERCOOLED SPRAY FREEZING</text>
+<!-- Dynamic Wind Streamlines (Cyan Curving Vectors) -->
+<g opacity="0.85" stroke="#22D3EE" stroke-linecap="round" stroke-width="1.6">
+<!-- Katabatic drainage streams from polar plateau down slope -->
+<path d="M 520 480 Q 510 420, 480 340 T 430 260" stroke-dasharray="160" stroke-dashoffset="30">
+<animate attributename="stroke-dashoffset" dur="4s" repeatcount="indefinite" values="320;0"></animate>
+</path>
+<path d="M 580 475 Q 560 410, 520 330 T 460 220" stroke-dasharray="180" stroke-dashoffset="60">
+<animate attributename="stroke-dashoffset" dur="4.2s" repeatcount="indefinite" values="360;0"></animate>
+</path>
+<path d="M 640 460 Q 610 390, 560 320 T 490 200" stroke-dasharray="200" stroke-dashoffset="10">
+<animate attributename="stroke-dashoffset" dur="3.8s" repeatcount="indefinite" values="400;0"></animate>
+</path>
+<!-- Cyclone Circulation Streams in Prydz Bay Basin -->
+<path d="M 220 220 C 310 160, 480 180, 470 290 C 460 370, 360 380, 280 330" stroke="#8aebff" stroke-dasharray="180" stroke-width="1.8">
+<animate attributename="stroke-dashoffset" dur="5s" repeatcount="indefinite" values="360;0"></animate>
+</path>
+<path d="M 160 180 C 320 100, 540 130, 550 290 C 560 410, 380 430, 240 370" opacity="0.65" stroke="#8aebff" stroke-dasharray="240" stroke-width="1.2">
+<animate attributename="stroke-dashoffset" dur="6s" repeatcount="indefinite" values="480;0"></animate>
+</path>
+<!-- Offshore westerly wind belt -->
+<path d="M 40 140 Q 280 120, 520 130 T 920 110" stroke="#60A5FA" stroke-dasharray="140" stroke-width="1.4">
+<animate attributename="stroke-dashoffset" dur="4.8s" repeatcount="indefinite" values="280;0"></animate>
+</path>
+<path d="M 80 80 Q 320 60, 600 75 T 950 65" stroke="#60A5FA" stroke-dasharray="160" stroke-width="1.2">
+<animate attributename="stroke-dashoffset" dur="5.2s" repeatcount="indefinite" values="320;0"></animate>
+</path>
+</g>
+<!-- Polar Stations on Shelf -->
+<!-- Bharati Station (69°24'S, 76°11'E) -->
+<g transform="translate(680, 420)">
+<rect fill="#FACC15" height="8" width="8" x="-4" y="-4"></rect>
+<circle cx="0" cy="0" r="10" stroke="#FACC15" stroke-dasharray="2 2" stroke-width="0.75"></circle>
+<text fill="#dde2f3" font-family="Space Grotesk" font-size="11" font-weight="700" x="12" y="-4">BHARATI STATION</text>
+<text fill="#94A3B8" font-family="JetBrains Mono" font-size="9" x="12" y="8">69°24'S, 76°11'E • 34 km/h ESE</text>
+<!-- Wind barb representation -->
+<line stroke="#FACC15" stroke-width="1.5" x1="0" x2="16" y1="0" y2="-12"></line>
+<line stroke="#FACC15" stroke-width="1.5" x1="16" x2="12" y1="-12" y2="-18"></line>
+<line stroke="#FACC15" stroke-width="1.5" x1="13" x2="9" y1="-10" y2="-16"></line>
+</g>
+<!-- Maitri Station (70°46'S, 11°44'E) -->
+<g transform="translate(180, 460)">
+<rect fill="#FACC15" height="8" width="8" x="-4" y="-4"></rect>
+<circle cx="0" cy="0" r="10" stroke="#FACC15" stroke-dasharray="2 2" stroke-width="0.75"></circle>
+<text fill="#dde2f3" font-family="Space Grotesk" font-size="11" font-weight="700" x="12" y="-4">MAITRI STATION</text>
+<text fill="#94A3B8" font-family="JetBrains Mono" font-size="9" x="12" y="8">70°46'S, 11°44'E • 28 km/h S</text>
+</g>
+<!-- Vessel Marker: RV POLAR EXPLORER -->
+<g transform="translate(410, 270)">
+<!-- Outer radar scan halo -->
+<circle cx="0" cy="0" opacity="0.4" r="44" stroke="#22D3EE" stroke-dasharray="3 3" stroke-width="1"></circle>
+<circle cx="0" cy="0" opacity="0.7" r="26" stroke="#22D3EE" stroke-width="1.2"></circle>
+<!-- Heading Vector (284°) -->
+<line stroke="#22D3EE" stroke-linecap="round" stroke-width="2.2" x1="0" x2="-22" y1="0" y2="-7"></line>
+<!-- Vessel icon indicator -->
+<polygon fill="#22D3EE" points="0,-9 7,7 -7,7" transform="rotate(284)"></polygon>
+<circle cx="0" cy="0" fill="#070D18" r="2.5"></circle>
+<!-- Ship Callout Box -->
+<rect fill="#0B1524" fill-opacity="0.92" height="42" stroke="#1E3A5F" stroke-width="1" width="180" x="18" y="-28"></rect>
+<text fill="#8aebff" font-family="Space Grotesk" font-size="11" font-weight="700" x="24" y="-14">RV POLAR EXPLORER</text>
+<text fill="#F1F5F9" font-family="JetBrains Mono" font-size="9" x="24" y="-1">HDG: 284° • SPD: 10.4 kn</text>
+<text fill="#94A3B8" font-family="JetBrains Mono" font-size="8.5" x="24" y="10">SWELL: 3.2m • BARO: 982 hPa</text>
+</g>
+<!-- Coordinate Graticule Annotations -->
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" x="15" y="25">64°00'S</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" x="15" y="195">67°00'S</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" x="15" y="380">70°00'S</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" x="210" y="525">30°00'E</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" x="500" y="525">55°00'E</text>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="10" x="760" y="525">75°00'E</text>
+<!-- SST Thermal Bar Legend Overlaid on Map -->
+<g transform="translate(20, 480)">
+<rect fill="url(#sst-legend)" height="8" stroke="#1E3A5F" stroke-width="0.5" width="160"></rect>
+<text fill="#94A3B8" font-family="JetBrains Mono" font-size="8.5" x="0" y="-4">SST GRADIENT CONTOUR</text>
+<text fill="#8aebff" font-family="JetBrains Mono" font-size="8" x="0" y="20">−2.0°C</text>
+<text fill="#dde2f3" font-family="JetBrains Mono" font-size="8" x="70" y="20">−1.0°C</text>
+<text fill="#60A5FA" font-family="JetBrains Mono" font-size="8" x="140" y="20">+0.5°C</text>
+</g>
+<defs>
+<lineargradient id="sst-legend" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="#080e19"></stop>
+<stop offset="50%" stop-color="#12344d"></stop>
+<stop offset="100%" stop-color="#22d3ee"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Floating Map Compass Rose -->
+<div class="absolute top-4 right-4 bg-surface-raised/85 p-2 flex flex-col items-center pointer-events-none">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">N</span>
+<div class="w-0.5 h-6 bg-gradient-to-b from-primary via-secondary to-transparent"></div>
+<span class="font-micro-label text-micro-label text-text-muted mt-1">GRID</span>
+</div>
+<!-- Bathymetric Warning Chip -->
+<div class="absolute bottom-4 right-4 bg-surface-raised/90 px-2.5 py-1.5 flex items-center gap-2">
+<span class="w-2 h-2 bg-status-caution"></span>
+<span class="font-telemetry-code text-telemetry-code text-text-primary">BATHYMETRY: CONTINENTAL SHELF SLOPE (480m)</span>
+</div>
+</div>
+<!-- BOTTOM TEMPORAL SCRUBBER -->
+<div class="p-panel-pad-compact bg-surface-raised flex flex-col gap-2">
+<div class="flex flex-wrap items-center justify-between gap-gutter-sm">
+<div class="flex items-center gap-1.5">
+<button class="w-8 h-7 bg-surface-container hover:bg-surface-container-high text-primary flex items-center justify-center transition-colors" id="step-back">
+<span class="material-symbols-outlined text-[16px]">skip_previous</span>
+</button>
+<button class="w-8 h-7 bg-primary hover:bg-primary-container text-on-primary flex items-center justify-center transition-colors" id="play-btn">
+<span class="material-symbols-outlined text-[16px]">play_arrow</span>
+</button>
+<button class="w-8 h-7 bg-surface-container hover:bg-surface-container-high text-primary flex items-center justify-center transition-colors" id="step-forward">
+<span class="material-symbols-outlined text-[16px]">skip_next</span>
+</button>
+</div>
+<!-- Active Time Frame Display -->
+<div class="bg-surface-container-lowest px-panel-pad-compact py-1 flex items-center gap-2">
+<span class="w-2 h-2 bg-primary"></span>
+<span class="font-telemetry-code text-telemetry-code text-primary font-bold tracking-wider" id="temporal-forecast-label">
+                FORECAST: T+12.0h (02 SEP 18:30 UTC) - APPROACHING SHEAR MARGIN
+              </span>
+</div>
+<div class="flex items-center gap-1 font-micro-label text-micro-label text-text-muted">
+<span>ECMWF T+72H ENSEMBLE</span>
+<span class="text-text-primary font-bold">• 1-HR DELTA</span>
+</div>
+</div>
+<!-- Slider Range Track -->
+<div class="flex flex-col gap-1 pt-1">
+<input class="w-full accent-primary h-1.5 bg-surface-container-high cursor-pointer appearance-none" id="temporal-slider" max="72" min="0" step="6" type="range" value="12"/>
+<div class="flex justify-between font-telemetry-code text-telemetry-code text-text-muted pt-0.5">
+<span class="text-primary font-bold">NOW (0h)</span>
+<span>+6h</span>
+<span class="text-primary font-bold">+12h</span>
+<span>+18h</span>
+<span class="text-status-danger font-bold">+24h (PEAK)</span>
+<span>+36h</span>
+<span>+48h</span>
+<span>+72h</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: FORECAST & TACTICAL ADVISORIES (~38% = 5 col) -->
+<div class="xl:col-span-5 2xl:col-span-4 flex flex-col gap-gutter-md">
+<!-- 3.a CRITICAL ADVISORY CARD: KATABATIC WIND WATCH -->
+<div class="bg-error-container/15 p-panel-pad-default flex flex-col gap-gutter-sm shadow-md relative overflow-hidden">
+<div class="absolute top-0 left-0 right-0 h-1 bg-status-danger"></div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-danger text-[22px] animate-pulse">warning</span>
+<span class="font-headline-sm text-headline-sm text-status-danger font-bold uppercase tracking-tight">
+                CRITICAL METEOROLOGICAL ADVISORY
+              </span>
+</div>
+<span class="px-1.5 py-0.5 bg-status-danger text-surface-container-lowest font-micro-label text-micro-label font-bold uppercase">
+              LEVEL 2 HAZARD
+            </span>
+</div>
+<div class="font-headline-md text-headline-md text-text-primary font-bold">
+            KATABATIC OUTFLOW EVENT • SECTOR 68°E
+          </div>
+<p class="font-body-md text-body-md text-text-primary leading-relaxed">
+            Strong katabatic drainage outflow expected traversing Sector 68°E. Sustained gusts up to <span class="text-status-danger font-bold">85 km/h (46 kn)</span>. Imminent risk of sudden whiteout conditions, rapid superstructure ice accretion, and severe offshore sea-spray freezing.
+          </p>
+<div class="bg-surface-container-lowest/80 p-panel-pad-compact flex flex-col gap-1.5 font-telemetry-code text-telemetry-code">
+<div class="flex justify-between">
+<span class="text-text-muted">AFFECTED WAYPOINTS:</span>
+<span class="text-status-danger font-bold">Corridor Waypoint Alpha-4 → Alpha-6</span>
+</div>
+<div class="flex justify-between">
+<span class="text-text-muted">IMPACT TIME WINDOW:</span>
+<span class="text-text-primary font-bold">T+18.0h to T+30.0h (12h Duration)</span>
+</div>
+<div class="flex justify-between">
+<span class="text-text-muted">RECOMMENDED MITIGATION:</span>
+<span class="text-status-caution font-bold">Structural de-icing Level 2 active</span>
+</div>
+</div>
+</div>
+<!-- 3.b 72H WIND & GUST VELOCITY FORECAST (DIRECTION-SPEED MATRIX) -->
+<div class="bg-surface-panel p-panel-pad-default flex flex-col gap-gutter-sm shadow-md">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">storm</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">
+                72h WIND &amp; GUST VELOCITY MATRIX
+              </span>
+</div>
+<span class="font-micro-label text-micro-label text-text-muted">UNITS: KM/H • DIR</span>
+</div>
+<!-- High-density Forecast Matrix Table -->
+<div class="flex flex-col gap-1 font-telemetry-code text-telemetry-code">
+<!-- Matrix Header -->
+<div class="grid grid-cols-12 text-text-muted text-micro-label font-micro-label uppercase pb-1 px-2">
+<span class="col-span-2">STEP</span>
+<span class="col-span-3">MEAN / GUST</span>
+<span class="col-span-4">VELOCITY SPECTRUM</span>
+<span class="col-span-3 text-right">VECTOR / STATE</span>
+</div>
+<!-- Row 0h -->
+<div class="grid grid-cols-12 items-center bg-surface-container-low/70 px-2 py-1.5 hover:bg-surface-container transition-colors">
+<span class="col-span-2 text-primary font-bold">0h (NOW)</span>
+<div class="col-span-3 text-text-primary">
+<span class="font-bold text-status-safe">25</span> / <span class="text-text-muted text-[10px]">41 km/h</span>
+</div>
+<div class="col-span-4 pr-2">
+<div class="w-full bg-surface-container-highest h-2 relative">
+<div class="bg-status-safe h-full" style="width: 32%;"></div>
+<div class="bg-status-safe/40 h-full absolute top-0" style="left: 32%; width: 18%;"></div>
+</div>
+</div>
+<span class="col-span-3 text-right text-text-secondary flex items-center justify-end gap-1">
+                25 SSE ↗ <span class="text-status-safe text-[10px]">MOD</span>
+</span>
+</div>
+<!-- Row 12h -->
+<div class="grid grid-cols-12 items-center bg-surface-container-low/70 px-2 py-1.5 hover:bg-surface-container transition-colors">
+<span class="col-span-2 text-primary font-bold">+12h</span>
+<div class="col-span-3 text-text-primary">
+<span class="font-bold text-status-caution">38</span> / <span class="text-text-muted text-[10px]">55 km/h</span>
+</div>
+<div class="col-span-4 pr-2">
+<div class="w-full bg-surface-container-highest h-2 relative">
+<div class="bg-status-caution h-full" style="width: 48%;"></div>
+<div class="bg-status-caution/40 h-full absolute top-0" style="left: 48%; width: 19%;"></div>
+</div>
+</div>
+<span class="col-span-3 text-right text-text-secondary flex items-center justify-end gap-1">
+                38 SE ↑ <span class="text-status-caution text-[10px]">INCR</span>
+</span>
+</div>
+<!-- Row 24h (PEAK KATABATIC IMPACT) -->
+<div class="grid grid-cols-12 items-center bg-error-container/20 px-2 py-1.5 shadow-sm">
+<span class="col-span-2 text-status-danger font-bold">+24h</span>
+<div class="col-span-3 text-status-danger font-bold">
+                78 / <span class="text-status-danger text-[10px]">88 km/h</span>
+</div>
+<div class="col-span-4 pr-2">
+<div class="w-full bg-surface-container-highest h-2 relative">
+<div class="bg-status-danger h-full" style="width: 88%;"></div>
+<div class="bg-status-danger/40 h-full absolute top-0" style="left: 88%; width: 12%;"></div>
+</div>
+</div>
+<span class="col-span-3 text-right text-status-danger font-bold flex items-center justify-end gap-1">
+                78 SE ↑ <span class="text-status-danger text-[10px]">PEAK</span>
+</span>
+</div>
+<!-- Row 36h -->
+<div class="grid grid-cols-12 items-center bg-surface-container-low/70 px-2 py-1.5 hover:bg-surface-container transition-colors">
+<span class="col-span-2 text-text-primary font-bold">+36h</span>
+<div class="col-span-3 text-text-primary">
+<span class="font-bold text-status-danger">62</span> / <span class="text-text-muted text-[10px]">74 km/h</span>
+</div>
+<div class="col-span-4 pr-2">
+<div class="w-full bg-surface-container-highest h-2 relative">
+<div class="bg-status-danger h-full" style="width: 72%;"></div>
+<div class="bg-status-danger/40 h-full absolute top-0" style="left: 72%; width: 14%;"></div>
+</div>
+</div>
+<span class="col-span-3 text-right text-text-secondary flex items-center justify-end gap-1">
+                62 ESE ↖ <span class="text-status-danger text-[10px]">HIGH</span>
+</span>
+</div>
+<!-- Row 48h -->
+<div class="grid grid-cols-12 items-center bg-surface-container-low/70 px-2 py-1.5 hover:bg-surface-container transition-colors">
+<span class="col-span-2 text-text-primary font-bold">+48h</span>
+<div class="col-span-3 text-text-primary">
+<span class="font-bold text-status-caution">42</span> / <span class="text-text-muted text-[10px]">50 km/h</span>
+</div>
+<div class="col-span-4 pr-2">
+<div class="w-full bg-surface-container-highest h-2 relative">
+<div class="bg-status-caution h-full" style="width: 52%;"></div>
+<div class="bg-status-caution/40 h-full absolute top-0" style="left: 52%; width: 10%;"></div>
+</div>
+</div>
+<span class="col-span-3 text-right text-text-secondary flex items-center justify-end gap-1">
+                42 E ← <span class="text-status-caution text-[10px]">DEC</span>
+</span>
+</div>
+<!-- Row 72h -->
+<div class="grid grid-cols-12 items-center bg-surface-container-low/70 px-2 py-1.5 hover:bg-surface-container transition-colors">
+<span class="col-span-2 text-text-muted font-bold">+72h</span>
+<div class="col-span-3 text-text-primary">
+<span class="font-bold text-status-safe">22</span> / <span class="text-text-muted text-[10px]">30 km/h</span>
+</div>
+<div class="col-span-4 pr-2">
+<div class="w-full bg-surface-container-highest h-2 relative">
+<div class="bg-status-safe h-full" style="width: 26%;"></div>
+<div class="bg-status-safe/40 h-full absolute top-0" style="left: 26%; width: 10%;"></div>
+</div>
+</div>
+<span class="col-span-3 text-right text-text-secondary flex items-center justify-end gap-1">
+                22 ENE ↙ <span class="text-status-safe text-[10px]">NORM</span>
+</span>
+</div>
+</div>
+<!-- Color Coding Threshold Reference -->
+<div class="flex items-center justify-between text-micro-label font-micro-label text-text-muted pt-1">
+<span class="flex items-center gap-1"><span class="w-2 h-2 bg-status-safe"></span> &lt;30 km/h Nominal</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 bg-status-caution"></span> 30-55 km/h Caution</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 bg-status-danger"></span> &gt;55 km/h Extreme Gale</span>
+</div>
+</div>
+<!-- 3.c SIGNIFICANT WAVE & SWELL HEIGHT (72H AREA CHART) -->
+<div class="bg-surface-panel p-panel-pad-default flex flex-col gap-gutter-sm shadow-md">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">waves</span>
+<span class="font-headline-sm text-headline-sm text-text-primary font-bold">
+                SIGNIFICANT WAVE &amp; SWELL HEIGHT (72h)
+              </span>
+</div>
+<span class="font-telemetry-code text-telemetry-code text-status-caution font-bold">MAX SWELL: 4.8m (+24h)</span>
+</div>
+<!-- Area Chart SVG with Threshold Marker -->
+<div class="relative w-full h-44 bg-surface-container-lowest p-2">
+<svg class="w-full h-full" fill="none" viewbox="0 0 460 140" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<lineargradient id="swell-wave-gradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"></stop>
+<stop offset="60%" stop-color="#0e3a53" stop-opacity="0.2"></stop>
+<stop offset="100%" stop-color="#080e19" stop-opacity="0"></stop>
+</lineargradient>
+<lineargradient id="hazard-swell-grad" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#FACC15" stop-opacity="0.35"></stop>
+<stop offset="100%" stop-color="#FACC15" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Horizontal Reference Lines (1m, 2m, 3m, 4m, 5m) -->
+<line stroke="#16263C" stroke-width="1" x1="30" x2="450" y1="120" y2="120"></line>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" x="5" y="123">1.0m</text>
+<line stroke="#16263C" stroke-width="1" x1="30" x2="450" y1="92" y2="92"></line>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" x="5" y="95">2.0m</text>
+<line stroke="#16263C" stroke-width="1" x1="30" x2="450" y1="64" y2="64"></line>
+<text fill="#64748B" font-family="JetBrains Mono" font-size="9" x="5" y="67">3.0m</text>
+<!-- 4.0m Operational Limit Threshold Line (Amber Dashed) -->
+<line stroke="#FACC15" stroke-dasharray="4 3" stroke-width="1.5" x1="30" x2="450" y1="36" y2="36"></line>
+<text fill="#FACC15" font-family="JetBrains Mono" font-size="9" font-weight="700" x="5" y="39">4.0m</text>
+<text fill="#FACC15" font-family="JetBrains Mono" font-size="8.5" font-weight="600" x="130" y="32">OPERATIONAL LIMIT (4.0 m) — VESSEL ROLL LIMIT EXCEEDED</text>
+<!-- Swell Exceedance Shading (+20h to +32h) -->
+<path d="M 170 36 Q 210 12, 230 14 T 270 36 Z" fill="url(#hazard-swell-grad)"></path>
+<!-- Wave Area Curve -->
+<!-- Points: 0h(3.2m=58px), 12h(3.8m=42px), 24h(4.8m=14px), 36h(3.9m=39px), 48h(2.8m=70px), 72h(2.4m=81px) -->
+<path d="M 40 58 
+                       C 90 52, 130 46, 170 36 
+                       C 200 20, 220 14, 230 14 
+                       C 245 14, 260 26, 280 42 
+                       C 320 62, 360 69, 400 75 
+                       L 440 81 L 440 125 L 40 125 Z" fill="url(#swell-wave-gradient)"></path>
+<!-- Stroke Line -->
+<path d="M 40 58 
+                       C 90 52, 130 46, 170 36 
+                       C 200 20, 220 14, 230 14 
+                       C 245 14, 260 26, 280 42 
+                       C 320 62, 360 69, 400 75 
+                       L 440 81" fill="none" stroke="#22d3ee" stroke-linecap="round" stroke-width="2.2"></path>
+<!-- Data Marker Dots -->
+<circle cx="40" cy="58" fill="#8aebff" r="3"></circle>
+<circle cx="170" cy="36" fill="#FACC15" r="3.5"></circle>
+<circle cx="230" cy="14" fill="#F87171" r="4" stroke="#dde2f3" stroke-width="1.5"></circle>
+<circle cx="280" cy="42" fill="#FACC15" r="3.5"></circle>
+<circle cx="440" cy="81" fill="#8aebff" r="3"></circle>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" font-weight="700" x="220" y="8">4.8m</text>
+</svg>
+<!-- Bottom Time Axis Labels -->
+<div class="flex justify-between px-6 text-micro-label font-micro-label text-text-muted">
+<span>0h</span>
+<span>+12h</span>
+<span class="text-status-danger font-bold">+24h</span>
+<span>+36h</span>
+<span>+48h</span>
+<span>+72h</span>
+</div>
+</div>
+<!-- Sea State Diagnostic Telemetry -->
+<div class="grid grid-cols-2 gap-gutter-sm bg-surface-container-lowest/60 p-panel-pad-compact font-telemetry-code text-telemetry-code">
+<div class="flex flex-col">
+<span class="text-text-muted text-micro-label font-micro-label">PRIMARY SWELL DIRECTION</span>
+<span class="text-text-primary font-bold">228° SW • PERIOD 11.4s</span>
+</div>
+<div class="flex flex-col">
+<span class="text-text-muted text-micro-label font-micro-label">WIND WAVE SPECTRUM</span>
+<span class="text-text-primary font-bold">1.4m SE • HIGH CHOP</span>
+</div>
+</div>
+</div>
+<!-- 3.d ACTION FOOTER CTA BUTTONS -->
+<div class="flex flex-col sm:flex-row gap-gutter-sm pt-1">
+<button class="flex-1 py-2.5 px-panel-pad-compact bg-primary hover:bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold tracking-tight uppercase flex items-center justify-center gap-2 shadow-md transition-all">
+<span class="material-symbols-outlined text-[18px]">route</span>
+            Generate Weather Routing Advisory
+          </button>
+<button class="py-2.5 px-panel-pad-compact bg-transparent hover:bg-accent-cyan-dim text-primary font-headline-sm text-headline-sm font-bold uppercase flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]">send</span>
+            Dispatch to Bridge
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

@@ -1,0 +1,87 @@
+# --- Secrets ----------------------------------------------------------------
+.env
+*.env
+!.env.example
+*.key
+*.pem
+credentials.json
+.cdsapirc
+.copernicusmarine-credentials
+
+# --- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+build/
+dist/
+*.egg-info/
+.eggs/
+.installed.cfg
+
+# --- Testing / tooling ------------------------------------------------------
+.pytest_cache/
+.polaris-test-workspace/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+.tox/
+
+# --- Databases --------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+
+# --- Downloaded / generated data --------------------------------------------
+# Raw provider downloads and processed archives are reproducible: rebuild them
+# with scripts/download_data.py and scripts/preprocess_data.py.
+data/raw/
+data/processed/
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# The demo directory holds the small bundled land-mask asset, which IS tracked.
+data/demo/*
+!data/demo/.gitkeep
+!data/demo/nsidc_land_mask.npz
+
+# --- Trained models ---------------------------------------------------------
+# The .joblib binaries are large, machine-specific and pickled against a
+# particular scikit-learn version, so a clone with a different version cannot
+# load them. Retrain with scripts/train_models.py (about 5 minutes).
+# The ** is required: models live under models/demo/ and models/real/.
+models/**/*.joblib
+backend/models/**/*.joblib
+# The .json model cards ARE tracked - a few kB of human-readable metrics that
+# document what was trained and how well, without any binary payload.
+
+# --- Logs -------------------------------------------------------------------
+logs/
+*.log
+
+# --- Notebooks --------------------------------------------------------------
+.ipynb_checkpoints/
+
+# --- Frontend ---------------------------------------------------------------
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+# Leaflet is vendored deliberately so the demo works with no network.
+!frontend/src/vendor/
+
+# --- Editors / OS -----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
